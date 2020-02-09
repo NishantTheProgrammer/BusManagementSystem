@@ -1,0 +1,368 @@
+h1
+{
+    color: red;
+}
+/* ::-webkit-scrollbar
+{
+    display: none;
+} */
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(46, 38, 38);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container
+{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.63);
+    height: 35vw;
+    width: 60vw;
+}
+
+.imageDiv
+{
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-image: url("../images/girl2.jpg");
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+}
+.workspace
+{
+    float: left;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(83, 83, 95);
+    overflow: hidden;
+    width: 60%;
+    height: 100%;
+}
+#abc
+{
+    color: green;
+    background-color: blue;
+}
+.actionSelector
+{
+    /* background-color: red; */
+    font-weight: bold;
+    font-size: 1.2vw;
+    text-align: center;
+    margin: 0 auto;
+    height: 7%;
+}
+.actionSelector div
+{
+    padding-top: 1vw;
+    user-select: none;
+    border-bottom: 0.3vw solid rgb(86, 129, 129);
+    text-shadow: 0px 0px 5px black;
+}
+
+.signInMenu
+{
+    height: 100%;
+    float: left;
+    width: 33%;
+    /* background-color: green; */
+}
+.signUpMenu
+{
+    float: left;
+    height: 100%;
+    width: 34%;
+    /* background-color: red; */
+}
+.forgetPasswordMenu
+{
+    float: left;
+    height: 100%;
+    width: 33%;
+}
+
+.actionSelector :hover 
+{
+    cursor: pointer;
+}
+#formContainer
+{
+    position: relative;
+    float: left;
+    /* background-color: orange; */
+    height: calc(90% - 0.3vw);
+    width: 300%;
+}
+.signIn
+{
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    /* background-color: red; */
+}
+.signUp
+{
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    /* background-color: green; */
+}
+.forgetPassword
+{
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    /* background-color: blue; */
+}
+
+.shiftLeft1
+{
+    animation-name: shiftL1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes shiftL1
+{
+    0%{
+
+    }
+    100%{
+        transform: translateX(-33.33%);
+    }
+}
+.shiftdLeft1
+{
+    animation-name: shiftdL1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes shiftdL1
+{
+    0%{
+
+    }
+    100%{
+        transform: translateX(-66.67%);
+    }
+}
+
+
+.shiftRight2
+{
+    animation-name: shiftR2;
+    
+    transform: translateX(-33.33%);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes shiftR2
+{
+    0%{
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.shiftLeft2
+{
+    animation-name: shiftL2;
+    
+    transform: translateX(-33.33%);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes shiftL2
+{
+    0%{
+    }
+    100%{
+        transform: translateX(-66.67%);
+    }
+}
+.shiftRight3
+{
+    animation-name: shiftR3;
+    
+    transform: translateX(-66.67%);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes shiftR3
+{
+    0%{
+    }
+    100%{
+        transform: translateX(-33.33%);
+    }
+}
+
+.shiftdRight3
+{
+    animation-name: shiftdR3;
+    transform: translateX(-66.67%);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes shiftdR3
+{
+    0%{
+
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+form
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: 80%;
+    /* background-color: yellow; */
+}
+form input[type="text"], form input[type="password"]
+{
+    display: block;
+    outline: none;
+    width: 60%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    font-size: 1vw;
+    margin: 10px auto;
+    padding: 10px;
+    color: rgb(214, 205, 205);
+    caret-color: rgb(214, 205, 205);
+    animation-name: input2;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+form select
+{ 
+    display: block;
+    outline: none;
+    width: 65%;
+    background: transparent;
+    border: none;
+    color: rgb(214, 205, 205);
+    border: 1px solid rgb(197, 197, 197);
+    font-size: 1vw;
+    margin: 10px auto;
+    padding: 10px;
+    caret-color: rgb(214, 205, 205);
+    animation-name: input2;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+
+}
+input[type="date"]
+{
+    display: block;
+    outline: none;
+    width: 60%;
+    display: none;
+    background: transparent;
+    border: none;
+    color: rgb(214, 205, 205);
+    border: 1px solid rgb(197, 197, 197);
+    font-size: 1vw;
+    margin: 10px auto;
+    padding: 10px;
+    caret-color: rgb(214, 205, 205);
+    animation-name: input2;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+
+}
+form select option
+{ 
+    display: block;
+    outline: none;
+    width: 65%;
+    background-color: rgb(83, 83, 95);
+    border: none;
+    color: white;
+    border: 1px solid rgb(197, 197, 197);
+    
+    font-size: 1vw;
+    margin: 10px auto;
+    padding: 10px;
+    caret-color: rgb(214, 205, 205);
+    animation-name: input2;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+
+}
+form input[type="submit"]
+{
+    display: block;
+    outline: none;
+    /* width: 60%; */
+    background: transparent;
+    color: rgb(214, 205, 205);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 8px 18px;
+}
+form input[type="submit"]:hover, form input[type="submit"]:focus
+{
+    position: relative;
+    cursor: pointer;
+    animation-name: submit;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes submit
+{
+   
+    100%
+    {
+        
+        color: black;
+        background-color: white;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.63);
+        border-radius: 50px;
+        
+    }
+}
+
+form input::placeholder
+{
+    color:  rgb(214, 205, 205);
+}
+
+input[type="text"]:focus, input[type="password"]:focus
+{
+    animation-name: input;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes input
+{
+    
+    100%
+    {
+
+        border-bottom:1.9px solid aqua;
+        width: 80%;
+        font-size: 1.4vw;
+    }
+}
+optgroup
+{
+    background-color: rgb(83, 83, 95);
+}
