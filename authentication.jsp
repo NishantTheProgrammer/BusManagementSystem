@@ -54,10 +54,10 @@
                     </form>
                 </div>
                 <div class="forgetPassword">
-                    <form>
+                    <form action="SendOTP" method="post">
                         <input type="text" name="email" placeholder="Email" autocomplete="off">
                         <input type="submit" value="Send OTP">
-                    </form>
+                    </form >
                     
                 </div>
             </divclass="shiftL">

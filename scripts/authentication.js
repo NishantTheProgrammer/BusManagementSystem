@@ -192,3 +192,15 @@ function toggleFields(field)
         document.getElementById("experience").style.display="none";
     }
 }
+function confirmPasswordField(len)
+{
+    if(len>4)
+    {
+        document.getElementById("confirmPassword").type="text";
+    }
+    else
+    {
+        document.getElementById("confirmPassword").value="";
+        document.getElementById("confirmPassword").type="hidden";
+    }
+}
