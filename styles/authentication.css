@@ -9,7 +9,7 @@ h1
 body
 {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(46, 38, 38);
+    background-image: url("../images/formBackground.jpg"); /*Photo by Luca Micheli on Unsplash*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -41,7 +41,7 @@ body
     float: left;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: rgb(83, 83, 95);
+    background-color: rgba(83, 83, 95, 0.90);
     overflow: hidden;
     width: 60%;
     height: 100%;

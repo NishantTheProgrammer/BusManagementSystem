@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="imageDiv">
+        <div class="imageDiv" style="background-image: url('images/lock.jpg')">
 
         </div>
         <div class="workspace">

@@ -11,11 +11,11 @@ public class SendOTP extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         String to = request.getParameter("email");
-        String subject = "OTP";
         String otp=GenerateOTP.get();
-        String message =  "Shivaji Bus OTP: "+otp;
-        String user = "knishant113@gmail.com";
-        String pass = "xxxxxxxx";
+        String subject = otp+" is your account recovery code";
+        String message =otp;
+        String user = "knishant113@gmail.com"; //gmail user ID
+        String pass = "xxxxxxxx"; //gmail user password
         SendMail.send(to,subject, message, user, pass);
         request.setAttribute("otp", otp);
         request.getRequestDispatcher("EnterOTP.jsp").forward(request, response);
