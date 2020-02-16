@@ -22,7 +22,7 @@
             </div>
             <div id="formContainer" >
                 <div class="signIn" >
-                    <form>
+                    <form action="signIn" method="post">
                         <input type="text" name="id" placeholder="ID" autocomplete="off">
                         <input type="password" name="password" placeholder="Password">
                         <input type="submit" value="Sign In">

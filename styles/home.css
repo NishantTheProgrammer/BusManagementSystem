@@ -1,0 +1,167 @@
+@media (prefers-color-scheme: dark) {
+    :root
+    {
+
+        --imgBoxShadow: 5px 5px 10px rgba(0, 0, 0, 0.692), -5px -5px 10px 0 rgb(241, 204, 204);
+    }
+}
+.greeting, .tagline
+{
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+.greeting
+{
+    margin-top: 15vw;
+    font-size: 4.25vw;
+}
+.tagline
+{
+    margin-top: 1vw;
+    font-size:1.5vw;
+}
+.imgWithArticle
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin-top: 25vw;
+    
+    height: 40vw;
+    margin-bottom: 5vw;
+}
+.imgWithArticle .articleDiv
+{
+    text-align: center;
+    width: 60%;
+    float: left;
+}
+.imgWithArticle .articleDiv h1
+{
+    font-size: 3vw;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+}
+.imgWithArticle .articleDiv p
+{
+    margin: 0 5vw;
+    text-align: justify;
+    font-size: 1.5vw;
+}
+.articleImg
+{
+    background-image: url("../images/vehiclesStopping.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-left: 5%;
+    width: 30%;
+    height: 40vw;
+    border-radius: 1vw;
+    margin-bottom: 5vw;
+    box-shadow: var(--imgBoxShadow);
+}
+.userFeedbacks
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 60vw;
+}
+.userFeedbacks h1
+{
+    margin-top: 2vw;
+    font-size: 4vw;
+    text-align: center;
+
+}
+.userFeedbacks p
+{
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 2.5vw;
+}
+.userFeedbacks .user
+{
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.356), inset -5px -5px 12px 0 rgba(255, 255, 255, 0.8);
+    background-color: white;
+    height: 40vw;
+    margin-top: 5vw;
+    width: 30vw;
+    float: left;
+    margin-left: 10vw;
+    border-radius: 1vw;
+}
+.userFeedbacks .user .userImg
+{
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    height: 24vw;
+    width: 24vw;
+    border-radius: 15vw;
+    margin-left: 3vw;
+    margin-top: 3vw;
+
+    background-size: 100% 100%;
+}
+.userFeedbacks .user p
+{
+    font-size: 1.2vw;
+    text-align: justify;
+    width: 24vw;
+    margin: 2vw auto;
+}
+.userFeedbacks .user h2
+{
+    font-size: 2vw;
+
+    text-align: center;
+    margin: 2vw auto;
+}
+.photoGallery
+{
+    height: 125vw;
+    width: 70vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.photoGallery h1
+{
+    font-size: 4vw;
+    margin-bottom: 4vw;
+}
+.photoGallery p
+{
+    margin-bottom: 2vw;
+    font-size: 1.5vw;
+}
+.photoRow
+{
+    width: 100%;
+    
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+.photoRow .Img
+{
+    width: 35vw;
+    height: 35vw;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+.photoRow h1
+{
+    margin-top: 2vw;
+    margin-left: 2vw;
+    margin-bottom: 1vw;
+}
+.photoRow p
+{
+    margin-left: 2vw;
+}

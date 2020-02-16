@@ -1,0 +1,182 @@
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+
+    :root
+    {
+        --navBackgroundColor:rgba(10, 7, 37, 0.73);
+        --bodyColor: rgb(10, 36, 26);
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root
+    {
+        --navBackgroundColor: rgba(213, 205, 255, 0.904);
+        --bodyColor: rgb(247, 214, 219);
+
+        --navLinkBoxShadow: 5px 5px 12px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgba(211, 225, 233, 0.8);
+        --navLinkBoxShadowInset:inset 5px 5px 12px rgba(0, 0, 0, 0.356), inset -5px -5px 12px 0 rgba(211, 225, 233, 0.8);
+    }
+}
+
+body
+{    
+    transition: ease all .5s;
+    overflow-x: hidden;
+    
+    background-color: var(--bodyColor);
+    font-family: 'Trebuchet MS',sans-serif;
+}
+
+.navPannel
+{
+    position: fixed;
+    color: wheat;
+    top: 0px;
+    width: 100%;
+    transition: ease all 2s;
+    height: 6vw;
+    z-index: 2;
+}
+.navPannel .logo
+{
+    float: left;
+    margin-left: 1.1vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    margin-right: 5vw;
+}
+.navPannel .logo .logoImage
+{
+    background-image: url(../images/logo1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 4vw;
+    width: 4vw;
+    float: left;
+}
+.navPannel .logo .logoHeading
+{
+    font-size: 1.7vw;
+    margin-left: .2vw;
+    text-align: center;
+    width: 10vw;
+    font-weight: bolder;
+    
+    
+    float: left;
+    position: relative;
+}
+.navPannel h1
+{
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.innerContainer
+{
+    z-index: 1;
+    position: relative;
+    margin-top: 6vw;
+    background: none;
+}
+
+.svgGredient
+{
+    position: absolute;
+    top: 0;
+}
+
+
+.navPannel .navLinks
+{
+    float: right;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    
+}
+.navPannel a
+{
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    margin-right: 1.5vw;
+    font-size: 1.5vw;
+    padding: 0.7vw 2vw;
+    border-radius: 0.8vw;
+    font-weight: bolder;
+    color: wheat;
+    transition: ease all 1s;
+}
+
+.navPannel a:hover
+{
+    border-radius: 2vw;
+    
+    padding: 1.2vw 3vw;
+    color: black;
+    background-color: white;
+}
+.navPannel a:active
+{
+    
+    box-shadow: var(--navLinkBoxShadowInset);
+}
+
+.footer
+{
+    width: 100vw;
+    height: 6vw;
+    background-color: #efefef;
+    
+    box-shadow: 0px -5px 15px rgb(0, 0, 0);
+}
+
+.footer .social, .footer h1
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer h1
+{
+    margin-left: 3vw;
+    margin-right: 45vw;
+    float: left;
+}
+.footer .social
+{
+    width: 4vw;
+    height: 4vw;
+    margin-left: 5vw;
+    border-radius: 5vw;
+    float: left;
+    transition: ease all .5s;
+    background-repeat: no-repeat;
+    background-size:60% 60%;
+    filter: grayscale(100%);
+    background-position: center;
+    box-shadow: 7px 7px 12px rgba(255, 255, 255, 0.6),
+                -7px -7px 12px rgba(70, 70, 70, .12);
+
+}
+.footer .social:hover
+{
+    filter: grayscale(0%);
+}
+.footer .social:active
+{
+  
+    box-shadow: inset 7px 7px 12px rgba(255, 255, 255, 0.6),
+                inset -7px -7px 12px rgba(70, 70, 70, .12);  
+}
