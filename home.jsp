@@ -22,7 +22,6 @@
                 <a class="link" href="authentication.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">login</a>
                 <a class="link" href="policies.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Policies</a>
                 <a class="link" href="about.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">About</a>
-                <a class="link" href="services.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Services</a>
                 <a class="link" href="home.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Home</a>
             </div>
     </div>

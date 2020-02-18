@@ -1,0 +1,128 @@
+.innerContainer
+{
+    text-align: center;
+}
+p
+{
+    font-size:1.5vw;
+}
+.innerContainer h1
+{
+    color: white;
+    font-size: 4vw;
+    margin-top: 15vw;
+}
+.innerContainer p
+{
+    
+    margin-top: 1vw;
+    color: white;
+}
+.about
+{
+    border-radius: 1vw;    
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgba(255, 255, 255, 0.8);
+    margin-top: 30vw;
+    margin-bottom: 5vw;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.about h1
+{
+    padding: 5vw;
+    font-size: 4vw;
+}
+.about p
+{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vw;
+    text-align: justify;
+}
+.leadership
+{
+    
+    border-radius: 1vw;    
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgba(255, 255, 255, 0.8);
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    height: 91vw;
+    transform: translateX(-50%);
+}
+.leadership h1
+{
+    padding: 5vw;
+    font-size: 4vw;
+}
+
+.leaderRow
+{
+    width: 100%;
+}
+.leader
+{
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.356), inset -5px -5px 12px 0 rgb(255, 255, 255);
+    border-radius: 1vw;
+    width: 32vw;
+    margin: 4vw;
+    float: left;
+    height: 30vw;
+}
+.leader .leaderImg
+{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgb(255, 255, 255);
+    height: 8vw;
+    width: 8vw;
+    border-radius: 5vw;
+    margin: 3vw auto;
+    
+    background-size: 100% 100%;
+}
+.leader h1
+{
+    font-size: 2.5vw;
+    padding: 0;
+}
+.leader .aboutLeader
+{
+    margin-top: 20px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1.1vw;
+    text-align: justify;
+}
+.contacts
+{
+    
+    border-radius: 1vw;    
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgba(255, 255, 255, 0.8);
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    height: 29vw;
+    transform: translateX(-50%);
+}
+.contacts h1
+{
+    padding: 5vw;
+    font-size: 4vw;
+}
+.contacts table
+{
+    margin-left: 5vw;
+    text-align: left;
+    font-size: 2vw;
+}

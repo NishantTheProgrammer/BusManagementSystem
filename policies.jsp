@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/policies.css">
     <link rel="icon" href="images/icon.png">
     <title>Policies</title>
     
@@ -21,7 +22,6 @@
                 <a class="link" href="authentication.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">login</a>
                 <a class="link" href="policies.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Policies</a>
                 <a class="link" href="about.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">About</a>
-                <a class="link" href="services.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Services</a>
                 <a class="link" href="home.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Home</a>
             </div>
     </div>
@@ -59,6 +59,30 @@
             </linearGradient>
             </defs>
         </svg>  
+        <div class="innerContainer">
+            <h1>-- Our Policies --</h1>
+            <p>Specifying policies is best way to avoid misunderstandings!</p>
+        </div>
+        <div class="policy">            
+            <h1>policy name</h1>
+            <p>At <b>Shivaji Roadways</b>, we all come to work every day because we 
+                want to solve the biggest problem which is transport. Everyone
+                is guessing. Publishers don't know what apps to build,
+                how to monetize them, or even what to price them at. 
+                Advertisers & brands don't know where their target 
+                users are, how to reach them, or even how much they 
+                need to spend in order to do so. Inve.</p>
+        </div>
+        <div class="policy">            
+            <h1>policy Name</h1>
+            <p>At <b>Shivaji Roadways</b>, we all come to work every day because we 
+                want to solve the biggest problem which is transport. Everyone
+                is guessing. Publishers don't know what apps to build,
+                how to monetize them, or even what to price them at. 
+                Advertisers & brands don't know where their target 
+                users are, how to reach them, or even how much they 
+                need to spend in order to do so. Inve.</p>
+        </div>
         <!-- <%
             if(session.getAttribute("id")!=null)
             {
@@ -75,6 +99,12 @@
             <form action="logout" method="post">
                 <input type="submit" value="logout">
             </form> -->
+    </div>
+    <div class="footer">
+        <h1>&copy;shivajiroadways.com</h1>
+        <a  href="https://twitter.com/nishant29769070" class="social" style="background-image: url('images/twitter.png');"></a>
+        <a href="https://www.facebook.com/profile.php?id=100006100632588" class="social" style="background-image: url('images/facebook.png');"></a>
+        <a href="https://www.instagram.com/experimentswithcode/" class="social" style="background-image: url('images/instagram.png');"></a>
     </div>
 
         

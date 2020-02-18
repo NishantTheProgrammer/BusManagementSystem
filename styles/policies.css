@@ -1,0 +1,46 @@
+.innerContainer
+{
+    text-align: center;
+    
+    margin-bottom: 30vw;
+}
+p
+{
+    font-size:1.5vw;
+}
+.innerContainer h1
+{
+    color: white;
+    font-size: 4vw;
+    margin-top: 15vw;
+}
+.innerContainer p
+{
+    
+    margin-top: 1vw;
+    color: white;
+}
+.policy
+{
+    border-radius: 1vw;    
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgba(255, 255, 255, 0.8);
+    margin-bottom: 3vw;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.policy h1
+{
+    padding: 3vw;
+    font-size: 3vw;
+}
+.policy p
+{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vw;
+    text-align: justify;
+}
