@@ -16,8 +16,8 @@
         --navBackgroundColor: rgba(213, 205, 255, 0.904);
         --bodyColor: rgb(247, 214, 219);
 
-        --navLinkBoxShadow: 5px 5px 12px rgba(0, 0, 0, 0.356), -5px -5px 12px 0 rgba(211, 225, 233, 0.8);
-        --navLinkBoxShadowInset:inset 5px 5px 12px rgba(0, 0, 0, 0.356), inset -5px -5px 12px 0 rgba(211, 225, 233, 0.8);
+        --navLinkBoxShadow: 3px 3px 10px rgba(0, 0, 0, 0.356), -3px -3px 10px 0 rgba(255, 255, 255, 0.8);
+        --navLinkBoxShadowInset:inset 3px 3px 10px rgba(0, 0, 0, 0.356), inset -3px -3px 10px 0 rgba(211, 225, 233, 0.8);
     }
 }
 
@@ -110,9 +110,9 @@ body
     top: 50%;
     transform: translateY(-50%);
     text-decoration: none;
-    margin-right: 1.5vw;
-    font-size: 1.5vw;
-    padding: 0.7vw 2vw;
+    margin-right: 1.3vw;
+    font-size: 1.3vw;
+    padding: 0.6vw 1.7vw;
     border-radius: 0.8vw;
     font-weight: bolder;
     color: wheat;
@@ -123,7 +123,7 @@ body
 {
     border-radius: 2vw;
     
-    padding: 1.2vw 3vw;
+    padding: 1vw 2.8vw;
     color: black;
     background-color: white;
 }
@@ -133,13 +133,127 @@ body
     box-shadow: var(--navLinkBoxShadowInset);
 }
 
+.userProfile
+{
+    float: right;
+    position: relative;
+    margin-right: 1.3vw;
+    font-size: 1.6vw;
+    font-weight: bolder;
+    color: rgb(115, 233, 233);
+    /* background-color: black; */
+    transition: ease all 1s;
+    top: 1.6vw;
+    height: 4.4vw;
+}
+.userProfile:hover
+{
+    height: 7.7vw;
+}
+
+.userProfile .userName
+{
+    padding: 0.6vw 1.4vw;
+    
+    cursor: default;
+    margin-bottom: 1.3vw;
+}
+.userProfile .userImg
+{    
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5vw;
+    transition: ease all .5s;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.iconContainer
+{
+    height: 3.2vw;
+    width: 6.4vw;
+    position: relative;
+    /* background-color: yellow; */
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    top: -5vw;
+    margin: 0 auto;
+    opacity: 0;    
+    transition: ease all 1s;
+}
+.userProfile:hover > .iconContainer
+{
+    opacity: 1;
+    display: block;
+    
+    width: 8vw;
+    margin-top: 4.4vw;
+    animation-name: icons;
+    animation-duration: 1s;
+}
+
+.iconContainer .setting, .iconContainer .logout
+{
+    height: 3.2vw;
+    width: 3.2vw;
+    /* background-color: red; */
+    border-radius: 5vw;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    filter: grayscale(1);
+    transition: ease all .5s;
+}
+.setting
+{
+    float: left;
+    background-image: url(../images/settings.png);
+}
+.logout
+{
+    float: right;
+    background-image: url(../images/logout.png);
+}
+
+.setting:hover, .logout:hover
+{
+    filter: grayscale(0);   
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.setting:hover
+{
+    transform: rotateZ(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer
 {
     width: 100vw;
     height: 6vw;
     background-color: #efefef;
     
-    box-shadow: 0px -5px 15px rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 .footer .social, .footer h1

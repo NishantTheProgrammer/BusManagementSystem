@@ -24,11 +24,15 @@ window.onscroll=function()
                 this.style.backgroundColor = "rgba(0, 0 , 0, 0)";
             }
         }
+        var userImg=document.getElementsByClassName("userImg")[0].style;
+        var userName=document.getElementsByClassName("userName")[0].style;
+        userName.textShadow="none";
+        userImg.borderRadius="5vw";
     }
     else
     {
         nav.backgroundColor="var(--navBackgroundColor)";
-        nav.boxShadow="0px 5px 20px 0px black";
+        nav.boxShadow="0px 0px 20px rgba(0, 0, 0, 0.5)";
         logoHeading.textShadow="0px 0px 5px black";
         for(i=0; i<link.length; i++)
         {
@@ -45,6 +49,12 @@ window.onscroll=function()
             }
             
         }
+        
+        var userImg=document.getElementsByClassName("userImg")[0].style;
+        var userName=document.getElementsByClassName("userName")[0].style;
+        userName.textShadow="0px 0px 5px black";
+        userImg.borderTopLeftRadius="0";
+        userImg.borderTopRightRadius="0";
     }
 }
 function elemFocused(element){
