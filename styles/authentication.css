@@ -247,6 +247,11 @@ form input[type="text"], form input[type="password"]
     animation-name: input2;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
+}form h1
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 3vw;
 }
 form select
 { 

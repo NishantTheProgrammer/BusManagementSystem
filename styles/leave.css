@@ -1,0 +1,33 @@
+body
+{
+    background-image: none;
+}
+.container
+{
+    position: relative;
+    width: 40vw;
+    margin-top: 30vw;
+    box-shadow: none;
+}
+.workspace
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(83, 83, 95, 0.1); */
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.63);
+}
+input[type="date"]
+{
+    display: block;
+}
+
+#from::before
+{
+    content: "From \00a0";
+}
+#to::before
+{
+    content: "To \00a0\00a0\00a0";
+}

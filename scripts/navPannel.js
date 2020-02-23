@@ -1,6 +1,5 @@
 window.onscroll=function()
 {
-    console.log(!window.pageYOffset );
     var nav=document.getElementsByClassName("navPannel")[0].style;
     var link=document.getElementsByClassName("link");
     var logoHeading=document.getElementsByClassName("logoHeading")[0].style;
@@ -24,10 +23,17 @@ window.onscroll=function()
                 this.style.backgroundColor = "rgba(0, 0 , 0, 0)";
             }
         }
-        var userImg=document.getElementsByClassName("userImg")[0].style;
-        var userName=document.getElementsByClassName("userName")[0].style;
-        userName.textShadow="none";
-        userImg.borderRadius="5vw";
+        try
+        {
+            var userImg=document.getElementsByClassName("userImg")[0].style;
+            var userName=document.getElementsByClassName("userName")[0].style;
+            userName.textShadow="none";
+            userImg.borderRadius="5vw";
+        }
+        catch
+        {
+
+        }
     }
     else
     {
@@ -49,12 +55,15 @@ window.onscroll=function()
             }
             
         }
-        
-        var userImg=document.getElementsByClassName("userImg")[0].style;
-        var userName=document.getElementsByClassName("userName")[0].style;
-        userName.textShadow="0px 0px 5px black";
-        userImg.borderTopLeftRadius="0";
-        userImg.borderTopRightRadius="0";
+        try
+        {
+            var userImg=document.getElementsByClassName("userImg")[0].style;
+            var userName=document.getElementsByClassName("userName")[0].style;
+            userName.textShadow="0px 0px 5px black";
+            userImg.borderTopLeftRadius="0";
+            userImg.borderTopRightRadius="0";
+        }
+        catch{}
     }
 }
 function elemFocused(element){

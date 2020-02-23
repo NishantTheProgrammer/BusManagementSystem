@@ -28,14 +28,20 @@
             if(session.getAttribute("id")!=null)
             {
             %>            
-                <div class="userProfile" onclick="window.location='logout';">
+                <div class="userProfile">
                     <p class="userName">Nishant</p>
                     <div class="userImg" style="background-image: url('images/nishant.jpg');"></div>
                     <div class="iconContainer">
                         <div class="setting"></div>
-                        <div class="logout"></div>
+                        <div class="logout" onclick="window.location='logout';"></div>
                     </div>
                 </div>
+                
+                <a class="link" href="salary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Salary</a>
+                <a class="link" href="fair.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fair</a>
+                <a class="link" href="report.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Report</a>
+                <a class="link" href="leave.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
+
             <%
             }
             else
@@ -43,6 +49,7 @@
             %>
                 <a class="link" href="authentication.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">login</a>
             <%}%>
+            
                 <a class="link" href="policies.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Policies</a>
                 <a class="link" href="about.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">About</a>
                 <a class="link" href="home.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Home</a>

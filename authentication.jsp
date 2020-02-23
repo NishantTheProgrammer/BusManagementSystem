@@ -60,7 +60,7 @@
                     </form >
                     
                 </div>
-            </divclass="shiftL">
+            </div>
         </div>
     </div>
 </body>

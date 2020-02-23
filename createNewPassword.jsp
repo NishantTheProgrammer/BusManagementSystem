@@ -12,19 +12,18 @@
 <body>
     <div class="container">
         <div class="imageDiv" style="background-image: url('images/lock.jpg')">
-
         </div>
         <div class="workspace">
-        <form>
-            <input type="text"
-                        name="newPassword"
-                        id="newPassword"
-                        placeholder="Enter New Password"
-                        onkeydown="confirmPasswordField(this.value.length)">
-                        
-            <input type="hidden" placeholder="Confirm Password" id="confirmPassword">
-            <input type="submit">
-        </form>
+            <form>
+                <input type="text"
+                            name="newPassword"
+                            id="newPassword"
+                            placeholder="Enter New Password"
+                            onkeydown="confirmPasswordField(this.value.length)">
+                            
+                <input type="hidden" placeholder="Confirm Password" id="confirmPassword">
+                <input type="submit">
+            </form>
         </div>
     </div>
 </body>
