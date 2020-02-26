@@ -6,7 +6,7 @@ body
 {
     position: relative;
     width: 40vw;
-    margin-top: 30vw;
+    margin-top: 29vw;
     box-shadow: none;
 }
 .workspace
@@ -30,4 +30,17 @@ input[type="date"]
 #to::before
 {
     content: "To \00a0\00a0\00a0";
+}
+#rangeOutput
+{
+    text-align: center;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: rgb(214, 205, 205);
+    margin-top: 2vw;
+}
+#rangeOutput::before
+{
+    content: "Passangers: \00a0";
 }

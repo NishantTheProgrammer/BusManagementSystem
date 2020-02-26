@@ -24,7 +24,6 @@
         height: 100px;
         width: 100px;
         background-color: green;
-        background-color: green;
         position: relative;
         animation-name: anim2;
         animation-duration: 5s;

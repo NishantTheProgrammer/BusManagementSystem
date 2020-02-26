@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/leave.css">
     <link rel="icon" href="images/icon.png">
-    <title>Leave</title>
+    <title>Route</title>
 </head>
-<body onload="setDates();">
+<body onload="changeRange();">
     <jsp:include page="navigationPannel.jsp"></jsp:include>
-              
+
     <svg class="svgGredient" width="1536" height="541" viewBox="0 0 1536 541" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="786.381" cy="363.536" rx="136.658" ry="137.145" fill="#9723C0"/>
         <path d="M415.124 535.125C293.029 552.177 83.6654 535.125 0 423.937V0H1536V56.2712V253.781C1536 253.781 1437.62 358.6 1337.81 393.735C1199.55 442.402 1097.2 358.212 910.651 386.631C724.106 415.049 537.22 518.074 415.124 535.125Z" fill="url(#paint0_linear)"/>
@@ -51,52 +51,28 @@
     <div class="container">
         <div class="workspace">
             <form>
-                <h1>Request For Leave</h1>
+                <h1>Route</h1>
                 <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Reason</option>
-                    <option>Casual/Incidental</option>
-                    <option>Hospitalization</option>
-                    <option>Recovery After Hospitalization</option>
-                    <option>Medical Ground</option>
-                    <option>For Study</option>
-                    <option>Election Duty</option>
-                    <option>Apearing In Exam</option>
-                    <option>Family Walfare Program</option>
-                    <option>For Care of Childrens</option>
-                    <option>Marrige</option>
+                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Bus No.</option>
+                    <option>971</option>
+                    <option>234</option>
+                    <option>982</option>
+                    <option>TMS</option>
                 </select>
-                <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Type</option>
-                    <option>Casual Leave (CL)</option>
-                    <option>Half Pay Leave (HPL)</option>
-                    <option>Maternity Leave (ML)</option>
-                    <option>Maternity Leave (ML)</option>
-                    <option>Child Care Leave (CCL)</option>
-                    <option>Leave Without Pay (LWP)</option>
-                    <option>Compansative Casual Leave (CCL)</option>
-                    <option>Priviledge Leave (PL)</option>
-                </select>
-                <input type="date" id="from" onchange="updateMin(this.value);" name="from" style="display: block;">
-                <input type="date" id="to" value="2018-07-22" name="to" style="display: block;">
-                <input type="text" name="tempAddress" placeholder="Address During Leave">
-                <input type="submit" value="Request">
+                <input type="submit" value="Get Info">
             </form>
         </div>
     </div>
 
-    <div class="container" style="margin: 0;
-                            height: 20vw;">
-        <div class="workspace">
-            <form>
-                <h1>Check Status</h1>
-                <input type="text" name="applicationNo" placeholder="Application No.">
-                <input type="submit" value="Check Status">
-            </form>
-        </div>
-    </div>
     
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
 <script src="scripts/navPannel.js"></script>
-<script src="scripts/leave.js"></script>
+<script>
+    function changeRange()
+    {
+        var range = document.getElementsByClassName('noOfPassangers')[0].value;
+        document.getElementById('rangeOutput').innerHTML = range;
+    }
+</script>
 </html>

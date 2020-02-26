@@ -4,10 +4,7 @@
     
     margin-bottom: 30vw;
 }
-p
-{
-    font-size:1.5vw;
-}
+
 .innerContainer h1
 {
     color: white;
@@ -16,7 +13,7 @@ p
 }
 .innerContainer p
 {
-    
+    font-size:1.5vw;   
     margin-top: 1vw;
     color: white;
 }
@@ -43,4 +40,14 @@ p
     padding-right: 10vw;
     padding-bottom: 5vw;
     text-align: justify;
+}
+.policy table
+{
+    margin: 0  auto;
+    padding-top: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+    width: 75%;
+    border-spacing: 1vw;
 }

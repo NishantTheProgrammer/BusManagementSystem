@@ -12,49 +12,8 @@
     <title>Report</title>
 </head>
 <body onload="setDates();">
-    <div class="navPannel">
-        <div class="logo">
-            <div class="logoImage"></div>
-            <div class="logoHeading">Shivaji Roadways</div>
-        </div>
-        
-            <div class="navLinks">     
-                
-            <%
-            
-            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-            response.setHeader("Pragma", "no-cache");
-            response.setHeader("Expires", "0");
-            if(session.getAttribute("id")!=null)
-            {
-            %>            
-                <div class="userProfile">
-                    <p class="userName">Nishant</p>
-                    <div class="userImg" style="background-image: url('images/nishant.jpg');"></div>
-                    <div class="iconContainer">
-                        <div class="setting"></div>
-                        <div class="logout" onclick="window.location='logout';"></div>
-                    </div>
-                </div>
-                
-                <a class="link" href="salary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Salary</a>
-                <a class="link" href="fair.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fair</a>
-                <a class="link" href="report.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Report</a>
-                <a class="link" href="leave.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
 
-            <%
-            }
-            else
-            {
-            %>
-                <a class="link" href="authentication.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">login</a>
-            <%}%>
-            
-                <a class="link" href="policies.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Policies</a>
-                <a class="link" href="about.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">About</a>
-                <a class="link" href="home.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Home</a>
-            </div>
-    </div>
+    <jsp:include page="navigationPannel.jsp"></jsp:include>
               
     <svg class="svgGredient" width="1536" height="541" viewBox="0 0 1536 541" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="786.381" cy="363.536" rx="136.658" ry="137.145" fill="#9723C0"/>
@@ -117,12 +76,7 @@
     </div>
 
     
-    <div class="footer">
-        <h1>&copy;shivajiroadways.com</h1>
-        <a  href="https://twitter.com/nishant29769070" class="social" style="background-image: url('images/twitter.png');"></a>
-        <a href="https://www.facebook.com/profile.php?id=100006100632588" class="social" style="background-image: url('images/facebook.png');"></a>
-        <a href="https://www.instagram.com/experimentswithcode/" class="social" style="background-image: url('images/instagram.png');"></a>
-    </div>
+    <jsp:include page="footer.jsp"></jsp:include>
 </body>
 <script src="scripts/navPannel.js"></script>
 </html>

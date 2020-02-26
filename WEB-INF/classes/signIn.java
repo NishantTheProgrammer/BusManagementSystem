@@ -9,10 +9,22 @@ public class signIn extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String id = request.getParameter("id");
+        String id = (String)request.getParameter("id");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
-        if(id.equals("113") && password.equals("1234"))
+        if(id.equals("staff") && password.equals("1234"))
+        {
+            session.setAttribute("id", id);
+            session.setAttribute("password", password);
+            response.sendRedirect("home.jsp");
+        }
+        else if(id.equals("pass") && password.equals("1234"))
+        {
+            session.setAttribute("id", id);
+            session.setAttribute("password", password);
+            response.sendRedirect("home.jsp");
+        }
+        else if(id.equals("admin") && password.equals("1234"))
         {
             session.setAttribute("id", id);
             session.setAttribute("password", password);

@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/policies.css">
     <link rel="icon" href="images/icon.png">
-    <title>Policies</title>
+    <title>Salary</title>
     
 </head>
 <body>
     <jsp:include page="navigationPannel.jsp"></jsp:include>
-    
     <div class="container">           
         <svg class="svgGredient" width="1536" height="541" viewBox="0 0 1536 541" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="786.381" cy="363.536" rx="136.658" ry="137.145" fill="#9723C0"/>
@@ -49,53 +48,33 @@
             </defs>
         </svg>  
         <div class="innerContainer">
-            <h1>-- Our Policies --</h1>
-            <p>Specifying policies is best way to avoid misunderstandings!</p>
+            <h1>-- Salary --</h1>
+            <p>There is a deeper satisfaction if you earn from your own<br> work than relying on corruptible ways of amassing riches.</p>
         </div>
-        <div class="policy">            
-            <h1>policy name</h1>
-            <p>At <b>Shivaji Roadways</b>, we all come to work every day because we 
-                want to solve the biggest problem which is transport. Everyone
-                is guessing. Publishers don't know what apps to build,
-                how to monetize them, or even what to price them at. 
-                Advertisers & brands don't know where their target 
-                users are, how to reach them, or even how much they 
-                need to spend in order to do so. Inve.</p>
+        <div class="policy">   
+            <h1>Rajesh Kumar</h1>         
+            <table>
+                <tr>
+                    <th>Transaction Id</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td>1101</td>
+                    <td>30,000</td>
+                    <td>11/12/2018</td>
+                </tr>
+                <tr>
+                    <td>1105</td>
+                    <td>42,000</td>
+                    <td>11/12/2018</td>
+                </tr>
+            </table>
         </div>
-        <div class="policy">            
-            <h1>policy Name</h1>
-            <p>At <b>Shivaji Roadways</b>, we all come to work every day because we 
-                want to solve the biggest problem which is transport. Everyone
-                is guessing. Publishers don't know what apps to build,
-                how to monetize them, or even what to price them at. 
-                Advertisers & brands don't know where their target 
-                users are, how to reach them, or even how much they 
-                need to spend in order to do so. Inve.</p>
-        </div>
-        <!-- <%
-            if(session.getAttribute("id")!=null)
-            {
-            %>
-            <h1 >Hey ${id} welcome</h1>
-            <%
-            }
-            else
-            {
-            %>
-            <h1>You're not autherized to view this page</h1>
-            <%}%>
-
-            <form action="logout" method="post">
-                <input type="submit" value="logout">
-            </form> -->
     </div>
-
     <jsp:include page="footer.jsp"></jsp:include>
 
         
 </body>
-<script src="scripts/navPannel.js">
-
- 
-</script>
+<script src="scripts/navPannel.js"></script>
 </html>
