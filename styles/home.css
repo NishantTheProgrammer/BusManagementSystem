@@ -153,7 +153,7 @@
     background-size: 100% 100%;
     float: left;
     
-    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.521);
 }
 .photoRow h1
 {

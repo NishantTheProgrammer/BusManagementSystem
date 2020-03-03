@@ -24,17 +24,17 @@
                 <div class="signIn" >
                     <form action="signIn" method="post">
                         <input type="text" name="id" placeholder="ID" autocomplete="off">
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="password" placeholder="Password" onblur="validatePassword(0);">
                         <input type="submit" value="Sign In">
                     </form>
                     
                 </div>
                 <div class="signUp">
                     <form>
-                        <input type="text" name="name" placeholder="Name" autocomplete="off">
-                        <input type="text" name="email" placeholder="Email" autocomplete="off">
-                        <input type="text" name="phone" placeholder="Phone" autocomplete="off">
-                        <select onchange="toggleFields(this.value)">
+                        <input type="text" name="name" placeholder="Name" onblur="validateName();" autocomplete="off">
+                        <input type="text" name="email" placeholder="Email" onblur="validateEmail(0);" autocomplete="off">
+                        <input type="text" name="phone" placeholder="Phone" onblur="validatePhone();" autocomplete="off">
+                        <select id="role" onchange="toggleFields(this.value)"  onblur="validateRole();">
                             <option value="" disabled selected style="color: rgb(214, 205, 205);">Select Your Role</option>
                             <option >Admin</option>
                             <option>Passanger</option>
@@ -44,18 +44,18 @@
                                 <option>Ticket Checker</option>
                             </optgroup>
                             
-                            <input type="text" name="walletBalance" placeholder="Wallet Balance" id="walletBalance" autocomplete="off" style="display: none;">
-                            <input type="text" name="licenceNo" placeholder="Licence No" id="licenceNo" autocomplete="off" style="display: none;">
-                            <input type="text" name="experience" placeholder="Experience" id="experience" autocomplete="off" style="display: none;">
-                            <input type="date" name="joiningDate" id="joiningDate">
+                            <input type="text" name="walletBalance" placeholder="Wallet Balance" id="walletBalance" autocomplete="off" style="display: none;" onblur="validateWalletBal();">
+                            <input type="text" name="licenceNo" placeholder="Licence No" id="licenceNo" autocomplete="off" style="display: none;" onblur="validateLicence();">
+                            <input type="text" name="experience" placeholder="Experience" id="experience" autocomplete="off" style="display: none;" onblur="validateExperience();">
+                            <input type="date" name="joiningDate" id="joiningDate" onblur="validateJoiningDate();">
                         </select>
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="password" onblur="validatePassword(1);" placeholder="Password">
                         <input type="submit" value="Sign Up">
                     </form>
                 </div>
                 <div class="forgetPassword">
                     <form action="SendOTP" method="post">
-                        <input type="text" name="email" placeholder="Email" autocomplete="off">
+                        <input type="text" name="email" placeholder="Email" autocomplete="off" onblur="validateEmail(1);">
                         <input type="submit" value="Send OTP">
                     </form >
                     
@@ -65,4 +65,5 @@
     </div>
 </body>
 <script src="scripts/authentication.js"></script>
+<script src="scripts/validate.js"></script>
 </html>

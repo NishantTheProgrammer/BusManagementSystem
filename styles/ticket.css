@@ -1,0 +1,90 @@
+
+@media screen
+{
+#msg
+{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Trebuchet MS',sans-serif;
+
+}
+.container
+{
+    display: none;
+}
+}
+
+
+
+
+@media print
+{
+
+#msg
+{
+    display: none;
+}
+@page
+{
+    size: 500px 500px;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: black;
+}   
+
+.container {
+    position: relative;
+    padding: 8px 8px 8px 8px;
+    height: 465px;
+    color: black;
+    background: white;
+    font-family: 'SimSun';
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+
+
+}
+
+.container::before {
+    background: linear-gradient(-135deg, black 5px, transparent 0), linear-gradient(135deg, black 5px, transparent 0);
+    background-position: left-top;
+    background-repeat: repeat-x;
+    background-size: 10px 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 9px;
+}
+.container:after {
+    background: linear-gradient(-45deg, black 5px, transparent 0), linear-gradient(45deg, black 5px, transparent 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 10px 10px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 9px;
+    border: none;
+}
+.container div, .container p
+{
+    margin-top: 15px;
+}
+
+
+}

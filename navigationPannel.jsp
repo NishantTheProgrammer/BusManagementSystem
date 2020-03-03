@@ -25,10 +25,10 @@
                 <div class="logout" onclick="window.location='logout';"></div>
             </div>
         </div>
-        <a class="link" href="bus.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Bus</a>
-        <a class="link" href="route.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
-        <a class="link" href="salary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Salary</a>
-        <a class="link" href="fare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a> 
+        <a class="link" href="updateBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Bus</a>
+        <a class="link" href="updateRoute.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
+        <a class="link" href="updateSalary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Salary</a>
+        <a class="link" href="updateFare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a> 
 
         <%}
         else if(session.getAttribute("id").equals("staff"))
@@ -63,7 +63,8 @@
         <a class="link" href="route.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
         <a class="link" href="fare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a>
         <a class="link" href="availableBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Available Buses</a>
-        <a class="link" href="estimatedTime.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Estimated Time</a>
+        <a class="link" href="estimatedTime.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Time</a>
+        <a class="link" href="ticket.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Ticket</a>
         
         <%}%>
         

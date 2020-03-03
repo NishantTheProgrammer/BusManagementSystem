@@ -368,6 +368,20 @@ input[type="text"]:focus, input[type="password"]:focus
         font-size: 1.4vw;
     }
 }
+select:focus
+{
+    animation-name: select;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes select
+{
+    
+    100%
+    {
+        border:1.9px solid aqua;
+    }
+}
 optgroup
 {
     background-color: rgb(83, 83, 95);

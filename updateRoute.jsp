@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/leave.css">
     <link rel="icon" href="images/icon.png">
-    <title>Fare</title>
+    <title>Update Route</title>
 </head>
 <body onload="changeRange();">
     <jsp:include page="navigationPannel.jsp"></jsp:include>
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="workspace">
             <form>
-                <h1>Fare</h1>
+                <h1>Update Route</h1>
                 <select>
                     <option value="" disabled selected style="color: rgb(214, 205, 205);">Bus No.</option>
                     <option>971</option>
@@ -25,24 +25,7 @@
                     <option>982</option>
                     <option>TMS</option>
                 </select>
-                <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">From</option>
-                    <option>Ashoke Nagar</option>
-                    <option>Nand Nagri</option>
-                    <option>Seema Puri</option>
-                    <option>GTB Nagar</option>
-                </select>
-                <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">To</option>
-                    <option>Ashoke Nagar</option>
-                    <option>Nand Nagri</option>
-                    <option>Seema Puri</option>
-                    <option>GTB Nagar</option>
-                    <option>Shalimar Bagh</option>
-                </select>
-                <p id='rangeOutput'></p>
-                <input type="range" value="1" min="1" max="20" onchange="changeRange();" class="noOfPassangers">
-                <input type="submit" value="Check Fare">
+                <input type="submit" value="Get Info">
             </form>
         </div>
     </div>
