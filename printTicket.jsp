@@ -13,7 +13,7 @@
 
     <div class="container"">
         <p style="font-size: 35px; text-align: center; ">Shivaji Roadways</p>
-        <div style="width: 100%; ">
+        <div style="width: 100%;">
             <span id="busNo">00243484</span>
             <span class="dateTime"style="float: right; margin-left: 10px;">12:42:50</span>
             <span class="dateTime" style="float: right;">02/01/20</span>

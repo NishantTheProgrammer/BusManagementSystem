@@ -16,12 +16,12 @@
         </div>
         <div class="workspace">
             <form action="CompareOTP" method="post">
-                <input type="hidden" value="<%=request.getAttribute("otp")%>" name="actualPassword">
+                <input type="hidden" value='<%=request.getAttribute("otp")%>' name="actualPassword">
                 <input type="text" placeholder="Enter OTP" name="enteredPassword">
                 <input type="submit">
             </form>
         </div>
     </div>
 </body>
-<script src="scripts/authentication.js"></script>
+<!-- <script src="scripts/authentication.js"></script> -->
 </html>

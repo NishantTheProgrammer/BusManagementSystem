@@ -310,7 +310,7 @@ form select option
     animation-fill-mode: forwards;
 
 }
-form input[type="submit"]
+form input[type="submit"], input[type="button"]
 {
     display: block;
     outline: none;
@@ -324,7 +324,7 @@ form input[type="submit"]
     margin: 10px auto;
     padding: 8px 18px;
 }
-form input[type="submit"]:hover, form input[type="submit"]:focus
+form input[type="submit"]:hover, form input[type="submit"]:focus, input[type="button"]:hover, input[type="button"]:focus
 {
     position: relative;
     cursor: pointer;

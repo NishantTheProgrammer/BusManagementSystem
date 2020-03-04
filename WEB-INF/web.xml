@@ -16,6 +16,16 @@
         <url-pattern>/SendOTP</url-pattern>
     </servlet-mapping>
    
+   
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>SignUp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
+    </servlet-mapping>
+   
     <servlet>
         <servlet-name>logout</servlet-name>
         <servlet-class>logout</servlet-class>

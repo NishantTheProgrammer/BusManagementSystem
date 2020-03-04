@@ -30,7 +30,7 @@
                     
                 </div>
                 <div class="signUp">
-                    <form>
+                    <form action="SignUp" method="POST">
                         <input type="text" name="name" placeholder="Name" onblur="validateName();" autocomplete="off">
                         <input type="text" name="email" placeholder="Email" onblur="validateEmail(0);" autocomplete="off">
                         <input type="text" name="phone" placeholder="Phone" onblur="validatePhone();" autocomplete="off">
