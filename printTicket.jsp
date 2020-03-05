@@ -25,7 +25,7 @@
         <p style="text-align: right;"><%=request.getParameter("destination")%></p>
         <p style="text-align: center;">Passangers: <%=request.getParameter("noOfPassangers")%></p>
         <p style="text-align: center; font-size: 17px;">Not transferable</p>
-        <p style="text-align: center; font-size: 50px; font-weight: bold;">FARE: <span>10</span></p>
+        <p style="text-align: center; font-size: 50px; font-weight: bold;">FARE: <span>&#x20B9;10</span></p>
     </div>
 </body>
 <script>

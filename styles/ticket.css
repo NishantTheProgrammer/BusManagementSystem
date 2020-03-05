@@ -22,11 +22,6 @@
 
 @media print
 {
-* 
-{
-    -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
-    color-adjust: exact !important;  /*Firefox*/
-}
 #msg
 {
     display: none;
@@ -54,9 +49,9 @@ body
     font-size: 25px;
     text-transform: uppercase;
     background-color: white;
-    background-image: url('../images/icon.png') !important;
-    filter: grayscale(1);
-    background-repeat: no-repeat;
+
+
+
     background-position: 40px 20px;
     background-size: 10% 10%;
 
