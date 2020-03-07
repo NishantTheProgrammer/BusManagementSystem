@@ -15,7 +15,6 @@ body
     border-bottom-left-radius: 5px;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(83, 83, 95, 0.1); */
     box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.63);
 }
 input[type="date"]
@@ -43,4 +42,17 @@ input[type="date"]
 #rangeOutput::before
 {
     content: "Passangers: \00a0";
+}
+#result
+{
+    margin-top: 3vw;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    font-size: 1.8vw;
+}
+#result p
+{
+    padding: .3vw;
 }

@@ -1,0 +1,1 @@
+select standNo from routestands where routeNo='971' and standName='Surya Nagar' union select standNo from routestands where routeNo='971' and standName='Seema Puri';

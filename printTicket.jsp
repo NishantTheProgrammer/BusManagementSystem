@@ -9,6 +9,52 @@
 
 </head>
 <body onload="print();">
+<%@page import="java.sql.*"%>
+<%
+    int fare = 0;
+    String routeNo = request.getParameter("routeNo");
+    String sourceName = request.getParameter("source");
+    String destinationName = request.getParameter("destination");
+    String busType = request.getParameter("type");
+    int no = Integer.parseInt(request.getParameter("noOfPassangers"));
+    Connection con = null;
+    Statement st = null;
+    ResultSet rs = null;
+    try
+    {
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
+        st = con.createStatement();
+        String query = "select standNo from routestands where routeNo='" + routeNo + "' and standName='" + sourceName + "' union select standNo from routestands where routeNo='" + routeNo + "' and standName='" + destinationName + "';";
+        rs = st.executeQuery(query);
+        rs.next();
+        int sourceNo = rs.getInt("standNo");
+        rs.next();
+        int destinationNo = rs.getInt("standNo");
+        int destance = Math.abs(sourceNo - destinationNo);
+        if(busType.equals("ORD"))
+        {
+            if(destance <= 2)
+                fare = 5 * no;
+            else if(destance <= 5)
+                fare = 10 * no;
+            else
+                fare = 15 * no;
+        }
+        else if(busType.equals("AC"))
+        {
+            if(destance <= 2)
+                fare = 10 * no;
+            else if(destance <= 4)
+                fare = 15 * no;
+            else if(destance <= 6)
+                fare = 15 * no;
+            else
+                fare = 15 * no;
+        }
+    }
+    catch(Exception e){out.print(e.getMessage());}
+%>
+
     <h1 id="msg">CTRL + P for Print Ticket (<span style="color: red">balance have already deducted</span>)</h1>
 
     <div class="container"">
@@ -19,13 +65,13 @@
             <span class="dateTime" style="float: right;">02/01/20</span>
         </div>
         <div style="text-align: center;">
-            <span id="ticketNo">ORD SPD00059</span><span style="margin-left: 20px;"><%=request.getParameter("busNo")%></span>
+            <span id="ticketNo"><%=busType%> SPD00059</span><span style="margin-left: 20px;"><%=routeNo%></span>
         </div>
-        <p style="width: 100%;"><%=request.getParameter("source")%><span style="float: right; ;">To</span></span></p>
-        <p style="text-align: right;"><%=request.getParameter("destination")%></p>
-        <p style="text-align: center;">Passangers: <%=request.getParameter("noOfPassangers")%></p>
+        <p style="width: 100%;"><%=sourceName%><span style="float: right; ;">To</span></span></p>
+        <p style="text-align: right;"><%=destinationName%></p>
+        <p style="text-align: center;">Passangers: <%=no%></p>
         <p style="text-align: center; font-size: 17px;">Not transferable</p>
-        <p style="text-align: center; font-size: 50px; font-weight: bold;">FARE: <span>&#x20B9;10</span></p>
+        <p style="text-align: center; font-size: 50px; font-weight: bold;">FARE: <span>&#x20B9;<%=fare%></span></p>
     </div>
 </body>
 <script>

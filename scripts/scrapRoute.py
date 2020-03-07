@@ -15,6 +15,7 @@ for tr in table.find_all('tr'):
     data.append(tuple(row))
     row = []
 data.remove(('106A', 'Old Delhi Railway Station', 'Fatehpuri'))         #exception value cominig from url
+data.remove(('OMS', 'Anand Vihar ISBT (Viveka Nand ISBT)', 'Anand Vihar ISBT (Viveka Nand ISBT)'))         #exception value cominig from url
 
 import mysql.connector
 mydb = mysql.connector.connect(host = 'localhost', user = 'root', password = '1234', database = 'shivajiroadways')
