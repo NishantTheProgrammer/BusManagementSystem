@@ -47,10 +47,15 @@
             else if(destance <= 4)
                 fare = 15 * no;
             else if(destance <= 6)
-                fare = 15 * no;
+                fare = 20 * no;
             else
-                fare = 15 * no;
+                fare = 25 * no;
         }
+
+        query = "insert into ticket(routeNo, source, destination, passangerId, type, noOfpassangers, fare) values('" +routeNo+ "', '" +sourceName+ "', '" +destinationName+ "', 1102, '" +busType+ "', " +no+ ", " +fare+ ");";
+        st.executeUpdate(query);
+        rs = st.executeQuery("select * from ticketoutput where passangerId = 1102 order by bookingDate desc limit 1;");
+        rs.next();
     }
     catch(Exception e){out.print(e.getMessage());}
 %>
@@ -60,36 +65,17 @@
     <div class="container"">
         <p style="font-size: 35px; text-align: center; ">Shivaji Roadways</p>
         <div style="width: 100%;">
-            <span id="busNo">00243484</span>
-            <span class="dateTime"style="float: right; margin-left: 10px;">12:42:50</span>
-            <span class="dateTime" style="float: right;">02/01/20</span>
+            <span id="busNo"><%=rs.getInt("passangerId")%></span>
+            <span class="dateTime" style="float: right;"><%=rs.getString("bookingDate")%></span>
         </div>
         <div style="text-align: center;">
-            <span id="ticketNo"><%=busType%> SPD00059</span><span style="margin-left: 20px;"><%=routeNo%></span>
+            <span id="ticketNo"><%=busType%> <%=rs.getString("ticketNo")%></span><span style="margin-left: 20px;"><%=rs.getString("routeNo")%></span>
         </div>
-        <p style="width: 100%;"><%=sourceName%><span style="float: right; ;">To</span></span></p>
-        <p style="text-align: right;"><%=destinationName%></p>
-        <p style="text-align: center;">Passangers: <%=no%></p>
+        <p style="width: 100%;"><%=rs.getString("source")%><span style="float: right; ;">To</span></span></p>
+        <p style="text-align: right;"><%=rs.getString("destination")%></p>
+        <p style="text-align: center;">Passangers: <%=rs.getInt("noOfPassangers")%></p>
         <p style="text-align: center; font-size: 17px;">Not transferable</p>
-        <p style="text-align: center; font-size: 50px; font-weight: bold;">FARE: <span>&#x20B9;<%=fare%></span></p>
+        <p style="text-align: center; font-size: 50px; font-weight: bold;">FARE: <span>&#x20B9;<%=rs.getInt("fare")%></span></p>
     </div>
 </body>
-<script>
-    var dateTime = document.getElementsByClassName("dateTime");
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth() + 1;
-    var yyyy = today.getFullYear();
-    var time = today.getHours() % 12+":"+today.getMinutes()+":"+today.getSeconds();
-    if (dd < 10)
-    {
-        dd = '0' + dd;
-    } 
-    if (mm < 10)
-    {
-        mm = '0' + mm;
-    }
-    dateTime[0].innerHTML = time;
-    dateTime[1].innerHTML = dd+"/"+mm+"/"+yyyy;
-</script>
 </html>

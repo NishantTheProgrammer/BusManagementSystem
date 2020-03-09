@@ -121,7 +121,6 @@
     <jsp:include page="svg.jsp"></jsp:include> 
     <div class="container" style="height: 45vw; margin-top: 34vw;">
         <div class="workspace">
-            <!-- printTicket.jsp -->
             <form action="printTicket.jsp"> 
                 <h1>Ticket Booking</h1>
                 <select name="routeNo" onchange="updateStands(this.value);">
@@ -187,5 +186,15 @@
         placeholder[0].text = "From";        
         placeholder[1].innerHTML = "To";
     }
+    window.addEventListener('load', function () {
+        var routeNo = document.getElementsByName('routeNo')[0].value;
+        if(routeNo)
+        {
+            setTimeout(function(){
+                updateStands(routeNo);
+            }, 200);
+        }
+    })
+    
 </script>
 </html>

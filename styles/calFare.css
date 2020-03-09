@@ -1,0 +1,84 @@
+.busTypeContainer
+{
+    width: 220px;
+    margin: 2vw auto;
+}
+.busTypeContainer label
+{
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    transition: ease-in-out .7s;
+
+}
+
+
+input[type="radio"]{
+    display:none;
+}
+label:last-child {
+    float: right !important; 
+}
+
+input[type="radio"] + label
+{
+    border: 2px solid transparent;
+    height: 5vw;
+    width: 5vw;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    cursor: pointer;
+}
+input[type="radio"]:checked + label
+{
+    background-color: rgba(255, 255, 255, 0.63);
+    height: 5vw;
+    width: 5vw;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    cursor: default;
+}
+
+
+form input[type="submit"]
+{
+    display: inline;
+}
+.submitContainer
+{
+    margin: 0 auto;
+    width: 17vw;
+}
+.submitContainer
+{
+    position: relative;
+    transform: translateY("20px");
+}
+.submitContainer :first-child
+{
+    float: right;
+    border-color: palevioletred;
+}
+.submitContainer :first-child:hover
+{    
+    position: relative;
+    cursor: pointer;
+    animation-name: pink;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes pink
+{
+    100%
+    {
+        color: black;
+        background-color: palevioletred;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.63);
+        border-radius: 50px;     
+    }
+}
+.pinkSubmit
+{
+    border-color: pink;
+}
