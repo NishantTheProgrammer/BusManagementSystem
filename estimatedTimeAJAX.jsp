@@ -18,10 +18,10 @@
         out.print(e.getMessage());
     }
 %>
-<option class="placeholder" value="" disabled selected >From</option>
+<option class="placeholder" value="" disabled selected style="color: rgb(214, 205, 205);">From</option>
 <%
-    while(rs.next())
+    for(int i =1 ; rs.next(); i++)
     {%>
-        <option><%=rs.getString("standName")%></option>
+        <option value="<%=i%>"><%=rs.getString("standName")%></option>
     <%}
 %>

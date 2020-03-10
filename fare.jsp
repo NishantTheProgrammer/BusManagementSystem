@@ -96,7 +96,7 @@
             <form> 
                 <h1>Calculate Fare</h1>
                 <select name="routeNo" onchange="updateStands(this.value);">
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Bus No.</option>
+                    <option value="" disabled selected >Bus No.</option>
                     <%
                         while(rs.next())
                         {%>
@@ -104,11 +104,11 @@
                         <%}
                     %>
                 </select>
-                <select name="source">
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">From</option>
+                <select name="source" onchange="disableTo(this.value, this.length)">
+                    <option value="" disabled selected >From</option>
                 </select>
-                <select name="destination">
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">To</option>
+                <select name="destination" onchange="disableFrom(this.value, this.length)">
+                    <option value="" disabled selected >To</option>
                 </select>
                 <div class="busTypeContainer">
                     <input type="radio" id="ORD" value="ORD" name="type" checked>
@@ -128,6 +128,7 @@
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
 <script src="scripts/navPannel.js"></script>
+<script src="scripts/disable.js"></script>
 <script>
     function changeRange()
     {
@@ -211,5 +212,7 @@
         }
         xmlhttp.send();
     }
+
 </script>
+
 </html>

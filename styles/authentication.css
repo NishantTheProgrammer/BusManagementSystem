@@ -386,3 +386,8 @@ optgroup
 {
     background-color: rgb(83, 83, 95);
 }
+
+option:disabled
+{
+    color: rgb(214, 205, 205);
+}

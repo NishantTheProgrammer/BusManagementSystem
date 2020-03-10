@@ -19,14 +19,14 @@
             <form>
                 <h1>Available Buses</h1>
                 <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">From</option>
+                    <option value="" disabled selected >From</option>
                     <option>Ashoke Nagar</option>
                     <option>Nand Nagri</option>
                     <option>Seema Puri</option>
                     <option>GTB Nagar</option>
                 </select>
                 <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">To</option>
+                    <option value="" disabled selected >To</option>
                     <option>Ashoke Nagar</option>
                     <option>Nand Nagri</option>
                     <option>Seema Puri</option>

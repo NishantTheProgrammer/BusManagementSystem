@@ -35,7 +35,7 @@
                         <input type="text" name="email" placeholder="Email" onblur="validateEmail(0);" autocomplete="off">
                         <input type="text" name="phone" placeholder="Phone" onblur="validatePhone();" autocomplete="off">
                         <select id="role" onchange="toggleFields(this.value)"  onblur="validateRole();">
-                            <option value="" disabled selected style="color: rgb(214, 205, 205);">Select Your Role</option>
+                            <option value="" disabled selected >Select Your Role</option>
                             <option >Admin</option>
                             <option>Passanger</option>
                             <optgroup label="Staff">

@@ -19,7 +19,7 @@
             <form>
                 <h1>Update Route</h1>
                 <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Bus No.</option>
+                    <option value="" disabled selected >Bus No.</option>
                     <option>971</option>
                     <option>234</option>
                     <option>982</option>

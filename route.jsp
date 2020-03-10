@@ -37,7 +37,7 @@
             <form action="temp.jsp">
                 <h1>Route</h1>
                 <select name="routeNo" onchange="getResults(this.value);">
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Bus No.</option>
+                    <option value="" disabled selected >Bus No.</option>
                     <%
                     while(rs.next())
                     {%>

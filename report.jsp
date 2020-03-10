@@ -21,14 +21,14 @@
             <form>
                 <h1>E-Report</h1>
                 <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Route No</option>
+                    <option value="" disabled selected >Route No</option>
                     <option>971</option>
                     <option>234</option>
                     <option>982</option>
                     <option>TMS</option>
                 </select>
                 <select>
-                    <option value="" disabled selected style="color: rgb(214, 205, 205);">Stand Name</option>
+                    <option value="" disabled selected >Stand Name</option>
                     <option>Ashoke Nagar</option>
                     <option>Nand Nagri</option>
                     <option>Seema Puri</option>
