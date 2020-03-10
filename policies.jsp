@@ -12,6 +12,23 @@
     
 </head>
 <body>
+<%@page import="java.sql.*"%>
+<%
+    Connection con = null;
+    Statement st = null;
+    ResultSet rs = null;
+    try
+    {
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
+        st = con.createStatement();
+        String query = "select pName, pDescription from Policy";
+        rs = st.executeQuery(query);
+    }
+    catch(Exception e)
+    {
+        out.print(e.getMessage());
+    }
+%>
     <jsp:include page="navigationPannel.jsp"></jsp:include>
     
     <div class="container">           
@@ -20,26 +37,15 @@
             <h1>-- Our Policies --</h1>
             <p>Specifying policies is best way to avoid misunderstandings!</p>
         </div>
-        <div class="policy">            
-            <h1>policy name</h1>
-            <p>At <b>Shivaji Roadways</b>, we all come to work every day because we 
-                want to solve the biggest problem which is transport. Everyone
-                is guessing. Publishers don't know what apps to build,
-                how to monetize them, or even what to price them at. 
-                Advertisers & brands don't know where their target 
-                users are, how to reach them, or even how much they 
-                need to spend in order to do so. Inve.</p>
-        </div>
-        <div class="policy">            
-            <h1>policy Name</h1>
-            <p>At <b>Shivaji Roadways</b>, we all come to work every day because we 
-                want to solve the biggest problem which is transport. Everyone
-                is guessing. Publishers don't know what apps to build,
-                how to monetize them, or even what to price them at. 
-                Advertisers & brands don't know where their target 
-                users are, how to reach them, or even how much they 
-                need to spend in order to do so. Inve.</p>
-        </div>
+        <%
+            while(rs.next())
+            {%>
+                <div class="policy">            
+                    <h1><%=rs.getString("pName")%></h1>
+                    <p><%=rs.getString("pDescription")%></p>
+                </div>
+            <%}
+        %>
     </div>
 
     <jsp:include page="footer.jsp"></jsp:include>

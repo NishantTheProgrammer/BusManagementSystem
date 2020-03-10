@@ -123,7 +123,7 @@
         <div class="workspace">
             <form action="printTicket.jsp"> 
                 <h1>Ticket Booking</h1>
-                <select name="routeNo" onchange="updateStands(this.value);" required>
+            <select name="routeNo" onchange="updateStands(this.value);" required>
                     <option value="" disabled selected >Bus No.</option>
                     <%
                         while(rs.next())
