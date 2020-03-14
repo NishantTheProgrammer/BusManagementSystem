@@ -69,5 +69,13 @@
         <welcome-file>home.jsp</welcome-file>   
     </welcome-file-list>  
 
+    <context-param> 
+   <description>Location to store uploaded file</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+      C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\BusManagementSystem\images\userProfile\
+    </param-value> 
+    </context-param>
+
 
 </web-app>

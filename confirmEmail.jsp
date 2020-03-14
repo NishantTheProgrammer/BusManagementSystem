@@ -11,21 +11,66 @@
     <title>Enter OTP</title>
 </head>
 <body>
+
+
+
+    <%
+    String name = (String)session.getAttribute("tempName");
+    String email = (String)session.getAttribute("tempEmail");
+    String phone = (String)session.getAttribute("tempPhone");
+    String role = (String)session.getAttribute("tempRole");
+    String password = (String)session.getAttribute("tempPassword");
+    String balance = null;
+    String licenceNo = null;
+    String experience = null;
+    String joiningDate = null;
+    
+    if(role.equals("Passanger"))
+    {
+        balance = (String)session.getAttribute("tempBalance");
+    }
+ 
+    if(role.equals("Driver"))
+    {
+        licenceNo = (String)session.getAttribute("tempLicenceNo");
+        experience = (String)session.getAttribute("tempExperience");
+        joiningDate = (String)session.getAttribute("tempJoiningDate");
+    }
+
+    if(role.equals("Conductor"))
+    {
+        joiningDate = (String)session.getAttribute("tempJoiningDate");
+    }
+    if(role.equals("Ticket Checker"))
+    {
+        joiningDate = (String)session.getAttribute("tempJoiningDate");
+    }
+
+
+
+
+%>
+
+
+
+
+
     <div class="container">
         <div class="imageDiv" style="background-image: url('images/profileBackground.png');">
 
         </div>
         <div class="workspace" >
-            <form method="POST" id="otpForm" style="display: block;">
+            <form method="POST" id="otpForm" style="display: block;" onsubmit="return CompareOTP();">
                 <h1 style="margin-bottom: 4vw;">Verify your email</h1>
                 <input type="hidden" value='<%=request.getAttribute("otp")%>' name="actualPassword">
                 <!-- <input type="hidden" value='1234' name="actualPassword"> -->                    <!--For testing purposes -->
                 <input type="text" placeholder="Enter OTP" name="enteredPassword">
-                <input type="button" value="submit" onclick="CompareOTP();">
+                <input type="submit" value="submit" >
             </form>
             <h2 id="errorMsg"style="text-align: center; display: none;">OTP didn't match</h2>
             <div class="profilePannel">
-                <form>
+                <!-- <form action="signUpProcess.jsp" method="POST"> -->
+                <form action = "signUpProcess.jsp" method = "POST" enctype = "multipart/form-data">
                     <div class="uploadImg">
                         <input type="file" name="img" onchange="uploadedImg.call(this)">
                         <span>Upload</span>
@@ -62,6 +107,7 @@
             document.getElementById('errorMsg').style.display = "block";
 
         }
+        return false;
     }
     function changeProfile(img)
     {

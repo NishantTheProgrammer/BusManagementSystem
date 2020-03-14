@@ -29,6 +29,10 @@ These terms and conditions shall be governed by and construed in accordance with
 
 The information posted on this website could include hypertext links or pointers to information created and maintained by non-Government/private organizations. <b>Shivaji Roadways</b> is providing these links and pointers solely for your information and convenience. When you select a link to an outside website, you are leaving the 'Guidelines for Indian Government Websites' site and are subject to the privacy and security policies of the owners/sponsors of the outside website.");
 
+ALTER TABLE ticket
+DROP FOREIGN KEY FK_PersonOrder;
+
+
 select * from policy;
 ALTER TABLE policy MODIFY pDescription varchar(15000);
 ALTER TABLE policy MODIFY pName varchar(50);
@@ -37,6 +41,114 @@ desc policy;
 
 select distinct(standName) from routeStands where standName like '%man%' limit 4;
 
-select * from routeStands where standName = 'Bhajanpura' and ;
+select * from routeStands where standName = 'Bhajanpura';
+select standNo, standName from routeStands where routeNo = '212';
+
+select routeNo from routeStands where standName= 'Seema Puri' and routeNo in( select routeNo from routeStands where standName = 'Model Town II');
+
+desc image;
+
+CREATE TABLE image ( id int NOT NULL AUTO_INCREMENT,
+firstname varchar(50),
+lastname varchar(50),
+email varchar(50),
+image blob,
+PRIMARY KEY (id)
+);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+insert into image values('Nishant', 'kumar', 'knishant113@gmail.com', load_file('D:\girl.jpg'));
+select * from image;
+
+insert into image(firstname, lastname, email,image) values('Nishant', 'kumar', 'knishant113@gmail.com', load_file('D:\girl.jpg'));
+
+CREATE TABLE image2 ( id int NOT NULL AUTO_INCREMENT,
+image blob,
+PRIMARY KEY (id)
+);
+insert into image2 values(null, load_file('D:\\girl.jpg'));
+select * from image2;
+
+
+
+
+
+
+insert into Email values("knishant113@gmail.com");
+desc admin;
+desc Passanger;
+drop table passanger;
+
+select * from email;
+select * from Admin;
+select * from passanger;
+delete from admin where email = 'knishant113@gmail.com';
+delete from email where email = 'knishant113@gmail.com';
+delete from email where email = 'sunny@gmail.com';
+delete from passanger where email = 'knishant113@gmail.com';
+delete from conductor where email = 'knishant113@gmail.com';
+delete from ticketchecker where email ='knishant118@gmail.com';
+delete from driver where email = 'knishant113@gmail.com';
+insert into admin values('knishant113@gmail.com', 'Nishant', '8860009709', 'abchellohello');
+
+insert into passanger(email, name, phone, password, walletBalance) values('knishant113@gmail.com', 'Nishant', '8860009709', 'abchellohello', 230);
+
+desc Conductor;
+select *,'nishant' as tablename from Conductor
+union
+select *,'shivam' as tablename from TicketChecker;
+insert into Conductor(email, name, phone, password, dob) values('knishant113@gmail.com', 'Nishant', '8860009709', 'abchellohello', '2008-05-01');
+select * from driver;
+insert into driver(email, name, phone, password, licenceNo, experience, dob)  values('knishant113@gmail.com', 'Nishant', '8860009709', 'abchellohello', 'ffffffascs' '"+Integer.parseInt(experience)+"' '"+joiningDate+"');
+
+select profilePic from admin;
+
+
+select email, name, password,'admin' as tablename from admin union
+select email, name, password,'passanger' as tablename from passanger union
+select email, name, password,'driver' as tablename from driver union
+select email, name, password,'conductor' as tablename from conductor union
+select email, name, password,'ticketchecker' as tablename from ticketchecker;
+select name from admin  where email = 'knishant120@gmail.com' and password = '123456789';
+select  * from passanger;
+
+select email, name, password, profilePic, 'admin' as tablename from admin  where email = 'knishant120@gmail.com' and password = '123456789' union
+select email, name, password, profilePic, 'passanger' as tablename from  passanger  where email = 'knishant120@gmail.com' and password = '123456789' union
+select email, name, password, profilePic, 'driver' as tablename from driver  where email = 'knishant120@gmail.com' and password = '123456789' union
+select email, name, password, profilePic, 'conductor' as tablename from conductor  where email = 'knishant120@gmail.com' and password = '123456789' union
+select email, name, password, profilePic, 'ticketchecker' as tablename from ticketchecker  where email = 'knishant120@gmail.com' and password = '123456789';
+select name from admin  where email = 'knishant120@gmail.com' and password = '123456789';
+
+
+
+select * from ticketchecker;
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+
+insert into ticket(routeNo, source, destination, email, type, noOfpassangers, fare) values('971', 'gtb', 'gtb', "+session.getAttribute("email")+", '" +busType+ "', " +no+ ", " +fare+ ");
+
+
+insert into ticket(routeNo, source, destination, email, type, noOfpassangers, fare) values('971', 'gtb', 'gtb', "+session.getAttribute("email")+", '" +busType+ "', " +no+ ", " +fare+ ");
+
+insert into ticket(routeNo, source, destination, email, type, noOfpassangers, fare) values('971', 'gtb', 'gtb', 'knishant114@gmail.com', 'AC', 1, 5);
+select * from passanger;
+select * from ticketOutput;
+drop table ticket;
+select * from passanger;
+update passanger set walletBalance = walletBalance - 5 where email = 'knishant114@gmail.com';
+select walletBalance from passanger where email = 'knishant114@gmail.com' and walletBalance >= 5;
+update passanger set walletBalance = 30 where email = 'knishant114@gmail.com';
+
+
+
+
+
+
+
+
+
+
+
 
 

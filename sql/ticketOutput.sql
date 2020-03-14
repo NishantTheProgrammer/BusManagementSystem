@@ -1,2 +1,2 @@
 create view ticketOutput as
-SELECT DATE_FORMAT(bookingTime, '%m/%d/%Y %H:%i:%S') as bookingDate, concat(substring(source, 1, 3), '_', substring(destination , 1, 3), ticketNo ) as ticketNo, routeNo, source, destination, type, passangerId, noOfPassangers, fare, feedback FROM ticket;
+SELECT DATE_FORMAT(bookingTime, '%m/%d/%Y %H:%i:%S') as bookingDate, concat(substring(source, 1, 3), '_', substring(destination , 1, 3), ticketNo ) as ticketNo, routeNo, source, destination, type, email, noOfPassangers, fare, feedback FROM ticket;

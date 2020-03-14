@@ -11,15 +11,15 @@
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
         st = con.createStatement();
-        String query = "SELECT source, destination FROM route WHERE routeNo = '" + r+ "'";
+        String query = "select standNo, standName from routeStands where routeNo = '"+r+"';";
         rs = st.executeQuery(query);
+        while(rs.next())
+        {%>
+            <p><%=rs.getInt("standNo") + "   "%><%=rs.getString("standName")%></p>
+        <%}
     }
     catch(Exception e)
     {
         out.print(e.getMessage());
     }
-    rs.next();
 %>
-<p><%=rs.getString("source")%></p>
-<p><b>&#8597;</b></p>
-<p><%=rs.getString("destination")%></p>

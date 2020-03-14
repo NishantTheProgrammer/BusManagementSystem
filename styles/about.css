@@ -2,10 +2,6 @@
 {
     text-align: center;
 }
-p
-{
-    font-size:1.5vw;
-}
 .innerContainer h1
 {
     color: white;
@@ -38,6 +34,7 @@ p
 }
 .about p
 {
+    font-size:1.5vw;
     padding-left: 10vw;
     padding-right: 10vw;
     padding-bottom: 5vw;

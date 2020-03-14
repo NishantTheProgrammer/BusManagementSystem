@@ -24,7 +24,13 @@
     {
         background-color: rgb(83, 83, 95);
         width: 100%;
+        max-height: 12.6vw;
+        overflow-y: scroll;
         position: relative;
+    }
+    .searchOutput .list::-webkit-scrollbar
+    {
+        display: none;
     }
     .searchOutput .list p
     {
@@ -32,6 +38,7 @@
         padding: 1vw;
         font-size: 1vw;
         margin: 0 auto;
+        transition: ease all .7s;
     }
     .searchOutput .list p:hover
     {
@@ -50,13 +57,13 @@
     <jsp:include page="svg.jsp"></jsp:include>
     <div class="container">
         <div class="workspace">
-            <form>
+            <form action="busesResult.jsp">
                 <h1>Available Buses</h1>
-                <input type="search" id="from" placeholder="From" onkeyup="getFrom(this.value);" autocomplete="on">
+                <input type="search" id="from" placeholder="From" onkeyup="getFrom(this.value);" name="source" autocomplete="on">
                 <div class="searchOutput">
                     <div class="list""></div>
                 </div>
-                <input type="search" id="to" placeholder="To" onkeyup="getTo(this.value);" autocomplete="on">
+                <input type="search" id="to" placeholder="To" onkeyup="getTo(this.value);" name="destination" autocomplete="on">
                 <div class="searchOutput">
                     <div class="list""></div>
                 </div>

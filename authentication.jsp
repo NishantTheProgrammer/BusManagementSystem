@@ -24,19 +24,21 @@
                 <div class="signIn" >
                     <form action="signIn" method="post">
                         <input type="text" name="id" placeholder="ID" autocomplete="off">
-                        <input type="password" name="password" placeholder="Password" onblur="validatePassword(0);">
+                        <!-- <input type="password" name="password" placeholder="Password" onblur="validatePassword(0);"> -->
+                        <input type="password" name="password" placeholder="Password">
                         <input type="submit" value="Sign In">
                     </form>
                     
                 </div>
                 <div class="signUp">
                     <form action="SignUp" method="POST">
+                    <!-- <form action="test.jsp" method="POST"> -->
                         <input type="text" name="name" placeholder="Name" onblur="validateName();" autocomplete="off">
                         <input type="text" name="email" placeholder="Email" onblur="validateEmail(0);" autocomplete="off">
                         <input type="text" name="phone" placeholder="Phone" onblur="validatePhone();" autocomplete="off">
-                        <select id="role" onchange="toggleFields(this.value)"  onblur="validateRole();">
+                        <select id="role" onchange="toggleFields(this.value)" name="role"  onblur="validateRole();">
                             <option value="" disabled selected >Select Your Role</option>
-                            <option >Admin</option>
+                            <option>Admin</option>
                             <option>Passanger</option>
                             <optgroup label="Staff">
                                 <option  >Driver</option>

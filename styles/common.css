@@ -139,7 +139,7 @@ body
     float: right;
     position: relative;
     margin-right: 1.3vw;
-    font-size: 1.6vw;
+    font-size: 1.6vw !important;
     font-weight: bolder;
     color: rgb(115, 233, 233);
     /* background-color: black; */
@@ -155,7 +155,7 @@ body
 .userProfile .userName
 {
     padding: 0.6vw 1.4vw;
-    
+    text-transform: capitalize;
     cursor: default;
     margin-bottom: 1.3vw;
 }

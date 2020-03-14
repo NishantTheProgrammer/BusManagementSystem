@@ -10,16 +10,16 @@
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
-        if(session.getAttribute("id") == null)
+        if(session.getAttribute("email") == null)
         {%>
             <a class="link" href="authentication.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">login</a>
         <%}
 
-        else if(session.getAttribute("id").equals("admin"))
+        else if(session.getAttribute("role").equals("admin"))
         {%>            
         <div class="userProfile">
-            <p class="userName">Nishant</p>
-            <div class="userImg" style="background-image: url('images/nishant.jpg');"></div>
+            <p class="userName">${name}</p>
+            <div class="userImg" style="background-image: url('images/userProfile/${profilePic}');"></div>
             <div class="iconContainer">
                 <div class="setting"></div>
                 <div class="logout" onclick="window.location='logout';"></div>
@@ -31,12 +31,15 @@
         <a class="link" href="updateFare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a> 
 
         <%}
-        else if(session.getAttribute("id").equals("staff"))
+        else if(session.getAttribute("role").equals("driver") ||
+                session.getAttribute("role").equals("conductor") ||
+                session.getAttribute("role").equals("ticketchecker")
+                )
         {
         %>            
         <div class="userProfile">
-            <p class="userName">Nishant</p>
-            <div class="userImg" style="background-image: url('images/nishant.jpg');"></div>
+            <p class="userName">${name}</p>
+            <div class="userImg" style="background-image: url('images/userProfile/${profilePic}');"></div>
             <div class="iconContainer">
                 <div class="setting"></div>
                 <div class="logout" onclick="window.location='logout';"></div>
@@ -49,11 +52,11 @@
         <a class="link" href="fare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a>
 
         <%}
-        else if(session.getAttribute("id").equals("pass"))
+        else if(session.getAttribute("role").equals("passanger"))
         {%>            
         <div class="userProfile">
-            <p class="userName">Nishant</p>
-            <div class="userImg" style="background-image: url('images/nishant.jpg');"></div>
+            <p class="userName">${name}</p>
+            <div class="userImg" style="background-image: url('images/userProfile/${profilePic}');"></div>
             <div class="iconContainer">
                 <div class="setting"></div>
                 <div class="logout" onclick="window.location='logout';"></div>

@@ -6,9 +6,10 @@
     ResultSet rs = null;
     try
     {
+        Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
         st = con.createStatement();
-        String query = "select distinct(standName) from routeStands where standName like '%"+keyword+"%' limit 4;";
+        String query = "select distinct(standName) from routeStands where standName like '%"+keyword+"%'";
         rs = st.executeQuery(query);
     }
     catch(Exception e)

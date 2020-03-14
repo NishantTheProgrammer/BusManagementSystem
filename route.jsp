@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="styles/leave.css">
     <link rel="icon" href="images/icon.png">
     <title>Route</title>
+    <style>
+        #standList
+        {
+            max-height: 30vw;
+            overflow-y: scroll;
+        }
+        .workspace p
+        {
+            font-size: 1.5vw;
+            padding-top: 0.5vw;
+            padding-bottom: 0.5vw;
+            padding-left: 2vw;
+        }
+
+    </style>
 </head>
 <body>
 <%@page import="java.sql.*" %>
@@ -19,6 +34,7 @@
     ResultSet rs = null;
     try
     {
+        Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
         st = con.createStatement();
         String query = "SELECT routeNo FROM route order by serialNo";
@@ -36,7 +52,7 @@
         <div class="workspace">
             <form action="temp.jsp">
                 <h1>Route</h1>
-                <select name="routeNo" onchange="getResults(this.value);">
+                <select name="routeNo" onchange="getResults(this.value); getStandList(this.value);">
                     <option value="" disabled selected >Bus No.</option>
                     <%
                     while(rs.next())
@@ -45,9 +61,12 @@
                     <%}
                     %>
                 </select>
-                <!-- <input type="submit" value="Get Info"> -->
                 <div id="result"></div>
             </form>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 4vw;">
+        <div class="workspace" id="standList" style="height: auto; color: white;padding-top: 0.5vw; padding-bottom: 0.5vw; opacity: 0;">
         </div>
     </div>
 
@@ -67,7 +86,23 @@
         xmlhttp.onreadystatechange = function()
         {
             document.getElementById('result').innerHTML = xmlhttp.responseText;
-        }       
+        }    
+
+             
+    }
+    function getStandList(route)
+    {
+        document.getElementById('standList').style.opacity = "1";
+        var xmlhttp = new XMLHttpRequest();
+        var param = "?routeNo=" +  route;
+        param = param.replace("+", "%2b")
+        xmlhttp.open("POST", "routeAJAX2.jsp" + param, true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange = function()
+        {
+            document.getElementById('standList').innerHTML = xmlhttp.responseText;
+        }  
+
     }
 </script>
 </html>
