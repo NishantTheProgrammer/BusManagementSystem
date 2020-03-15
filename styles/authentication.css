@@ -391,3 +391,31 @@ option:disabled
 {
     color: rgb(214, 205, 205);
 }
+
+
+.ImgResult .img
+{
+
+    background-size: cover;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    border-radius: 10vw;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+
+@keyframes fadeInAnimation { 
+    0% { 
+        height: 1vw;
+        width: 1vw;
+        opacity: 0; 
+    } 
+    100% { 
+
+        height: 7vw;
+        width: 7vw;
+        opacity: 1; 
+     } 
+} 

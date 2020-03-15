@@ -75,13 +75,6 @@
                         <input type="file" name="img" onchange="uploadedImg.call(this)">
                         <span>Upload</span>
                     </div>
-                    <h2>Or Select</h2>
-                    <div class="options">
-                        <div class="img" style="background-image: url(images/girl.png);" onclick="changeProfile(this)"></div>
-                        <div class="img" style="background-image: url(images/woman.png);" onclick="changeProfile(this)"></div>
-                        <div class="img" style="background-image: url(images/boy.png);" onclick="changeProfile(this)"></div>
-                        <div class="img" style="background-image: url(images/man.png);" onclick="changeProfile(this)"></div>
-                    </div>
                     <input type="submit" value="Finish!">
                 </form>
             </div>
@@ -109,17 +102,7 @@
         }
         return false;
     }
-    function changeProfile(img)
-    {
-        var url = img.style.backgroundImage;
-        urlLength = url.length;
-        splittedURL = url.substring(5, urlLength -2)
-        var imageDiv = document.getElementsByClassName('uploadImg')[0];
-        imageDiv.style.backgroundImage = "url('"+splittedURL+"')";
-        imageDiv.style.backgroundSize = "90% 90%";
-        imageDiv.style.backgroundPosition = "center bottom";
-        document.getElementsByName("img")[0].value = "";
-    }
+
     function uploadedImg()
     {
         var file = this.files[0]

@@ -23,7 +23,9 @@
             <div id="formContainer" >
                 <div class="signIn" >
                     <form action="signIn" method="post">
-                        <input type="text" name="id" placeholder="ID" autocomplete="off">
+                        <div class="ImgResult">
+                        </div>
+                        <input type="text" name="id" placeholder="ID" autocomplete="off" onkeyup="checkAccount(this.value);">
                         <!-- <input type="password" name="password" placeholder="Password" onblur="validatePassword(0);"> -->
                         <input type="password" name="password" placeholder="Password">
                         <input type="submit" value="Sign In">
@@ -68,4 +70,19 @@
 </body>
 <script src="scripts/authentication.js"></script>
 <script src="scripts/validate.js"></script>
+<script>
+    function checkAccount(email)
+    {
+        var param = "?email=" +  email;
+        param = param.replace("+", "%2b")
+        
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "authenticationAJAX.jsp" + param, true);
+        
+        xmlhttp.onreadystatechange = function(){
+            document.getElementsByClassName("ImgResult")[0].innerHTML = xmlhttp.responseText;
+        }
+        xmlhttp.send();
+    }
+</script>
 </html>

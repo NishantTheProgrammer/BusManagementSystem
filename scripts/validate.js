@@ -47,8 +47,48 @@ function validateEmail(num)
     }
     else
     {
-        email.style.borderBottom = "1.9px solid aqua";
-        email.placeholder = "Email";
+        var param = "?email=" +  email.value;
+        param = param.replace("+", "%2b")
+        
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "authenticationAJAX.jsp" + param, false);
+        
+        xmlhttp.onreadystatechange = function(){
+            if(num == 0)
+            {
+                if(xmlhttp.responseText.length < 4)
+                {
+                    email.style.borderBottom = "1.9px solid aqua";
+                    email.placeholder = "Email";
+                }
+                else
+                {
+                    email.style.borderBottom = "1.9px solid "+errorColor;
+                    email.value = "";
+                    email.placeholder = "Email already exist!";
+                }
+            }
+            if(num == 1)
+            {
+                if(xmlhttp.responseText.length > 4)
+                {
+                    email.style.borderBottom = "1.9px solid aqua";
+                    email.placeholder = "Email";
+                }
+                else
+                {
+                    email.style.borderBottom = "1.9px solid "+errorColor;
+                    email.value = "";
+                    email.placeholder = "Email doesn't exist!";
+                }
+            }
+        }
+        xmlhttp.send();
+
+
+
+
+
     }
 }
 

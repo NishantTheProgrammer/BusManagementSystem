@@ -65,7 +65,7 @@
         
         <a class="link" href="route.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
         <a class="link" href="fare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a>
-        <a class="link" href="availableBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Available Buses</a>
+        <a class="link" href="availableBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Availability</a>
         <a class="link" href="estimatedTime.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Time</a>
         <a class="link" href="ticket.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Ticket</a>
         

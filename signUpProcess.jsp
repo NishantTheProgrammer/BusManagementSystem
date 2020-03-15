@@ -48,7 +48,11 @@
             if ( !fi.isFormField () ) {
                // Get the uploaded file parameters
                String fieldName = fi.getFieldName();
-               fileName = fi.getName();
+               int dotPos = fi.getName().lastIndexOf(".");
+               String extn = fi.getName().substring(dotPos, fi.getName().length());
+
+
+               fileName = (String)session.getAttribute("tempEmail")+extn;
                boolean isInMemory = fi.isInMemory();
                long sizeInBytes = fi.getSize();
             
