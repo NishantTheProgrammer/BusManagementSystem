@@ -196,7 +196,7 @@ function confirmPasswordField(len)
 {
     if(len>4)
     {
-        document.getElementById("confirmPassword").type="text";
+        document.getElementById("confirmPassword").type="password";
     }
     else
     {

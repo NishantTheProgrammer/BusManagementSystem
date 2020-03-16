@@ -9,7 +9,7 @@ drop view ticketOutput;
 drop table ticket;
 SELECT DATE_FORMAT(bookingTime, '%m/%d/%Y %H:%i:%S') as bookingDate, ticketNo, routeNo, source, destination, feedback FROM ticket;
 select * from ticketOutput;
-alter table ticket auto_increment=1001;
+alter table leave_request auto_increment=1001;
 alter table ticket add feedback varchar(999);
 insert into ticket(routeNo, source, destination, passangerId, type, noOfpassangers, fare) values('234', 'Bhajanpura', 'Khalsa collage', 1102, 'ORD', 1, 10);
 truncate ticket;
@@ -45,7 +45,7 @@ select * from routeStands where standName = 'Bhajanpura';
 select standNo, standName from routeStands where routeNo = '212';
 
 select routeNo from routeStands where standName= 'Seema Puri' and routeNo in( select routeNo from routeStands where standName = 'Model Town II');
-
+desc email;
 desc image;
 
 CREATE TABLE image ( id int NOT NULL AUTO_INCREMENT,
@@ -117,7 +117,7 @@ select email, name, password, profilePic, 'passanger' as tablename from  passang
 select email, name, password, profilePic, 'driver' as tablename from driver  where email = 'knishant120@gmail.com' and password = '123456789' union
 select email, name, password, profilePic, 'conductor' as tablename from conductor  where email = 'knishant120@gmail.com' and password = '123456789' union
 select email, name, password, profilePic, 'ticketchecker' as tablename from ticketchecker  where email = 'knishant120@gmail.com' and password = '123456789';
-select name from admin  where email = 'knishant120@gmail.com' and password = '123456789';
+select * from admin  where email = 'knishant123@gmail.com' and password = '1234';
 
 
 
@@ -133,7 +133,7 @@ insert into ticket(routeNo, source, destination, email, type, noOfpassangers, fa
 
 insert into ticket(routeNo, source, destination, email, type, noOfpassangers, fare) values('971', 'gtb', 'gtb', 'knishant114@gmail.com', 'AC', 1, 5);
 select * from passanger;
-select * from ticketOutput;
+select * from ticketOutput where email = 'jaat39157@gmail.com';
 drop table ticket;
 select * from passanger;
 update passanger set walletBalance = walletBalance - 5 where email = 'knishant114@gmail.com';
@@ -142,7 +142,22 @@ update passanger set walletBalance = 30 where email = 'knishant114@gmail.com';
 
 
 
+select 'admin' as tablename from admin  where email = '"+email+"' union
+select 'passanger' as tablename from  passanger  where email = '"+email+"' union
+select 'driver' as tablename from driver  where email = '"+email+"' union
+select 'conductor' as tablename from conductor  where email = '"+email+"' union
+select 'ticketchecker' as tablename from ticketchecker  where email = '"+email+"';
 
+desc leave_request;
+
+insert into leave_request(reason, type, date_from, date_to, address, email) values('checking', 'personal', '2020-03-15', '2020-03-31', 'Saboli', 'knishant118@gmail.com');
+delete from leave_request where email = 'knishant118@gmail.com';
+
+select applicationNo from leave_request where email = 'knishant118@gmail.com' order by applicationNo desc limit 1;
+select * from leave_request;
+select status from leave_request where email = 'knishant118@gmail.com' and applicationNo=1009;
+
+update leave_request set status='pending' where applicationNo = 1009;
 
 
 

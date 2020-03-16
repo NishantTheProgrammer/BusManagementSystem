@@ -29,6 +29,7 @@ function validateName()
 
 function validateEmail(num)
 {
+    var isValid = false;
     var email=document.getElementsByName("email")[num];
     var dotpos=email.value.lastIndexOf(".");
     var atpos=email.value.lastIndexOf("@");
@@ -60,6 +61,7 @@ function validateEmail(num)
                 {
                     email.style.borderBottom = "1.9px solid aqua";
                     email.placeholder = "Email";
+                    isValid = true;
                 }
                 else
                 {
@@ -74,6 +76,7 @@ function validateEmail(num)
                 {
                     email.style.borderBottom = "1.9px solid aqua";
                     email.placeholder = "Email";
+                    isValid = true;
                 }
                 else
                 {
@@ -84,12 +87,8 @@ function validateEmail(num)
             }
         }
         xmlhttp.send();
-
-
-
-
-
     }
+    return isValid;
 }
 
 //------------------------------------------------------Validating phone-----------------------------------------------------

@@ -14,12 +14,12 @@
         <div class="imageDiv" style="background-image: url('images/lock.jpg')">
         </div>
         <div class="workspace">
-            <form>
-                <input type="text"
+            <form action="updatePassword.jsp" method="POST" onsubmit="return mathcPassword();">
+                <input type="password"
                             name="newPassword"
                             id="newPassword"
                             placeholder="Enter New Password"
-                            onkeydown="confirmPasswordField(this.value.length)">
+                            onkeyup="confirmPasswordField(this.value.length)">
                             
                 <input type="hidden" placeholder="Confirm Password" id="confirmPassword">
                 <input type="submit">
@@ -28,4 +28,19 @@
     </div>
 </body>
 <script src="scripts/authentication.js"></script>
+<script>
+    function mathcPassword()
+    {
+        if(document.getElementById("newPassword").value != document.getElementById("confirmPassword").value)
+        {
+            document.getElementById("confirmPassword").value = "";
+            document.getElementById("confirmPassword").placeholder = "Passwords didn't match!";
+            document.getElementById("confirmPassword").style.borderBottom = "1.9px solid rgb(241, 101, 7)";
+            return false;
+
+        }
+        else
+            return true;
+    }
+</script>
 </html>

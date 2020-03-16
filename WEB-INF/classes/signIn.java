@@ -43,10 +43,5 @@ public class signIn extends HttpServlet {
         {
             out.print(e.getMessage());
         }
-
-
-
-
-
     }   
 }

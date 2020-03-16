@@ -58,7 +58,7 @@
                     </form>
                 </div>
                 <div class="forgetPassword">
-                    <form action="SendOTP" method="post">
+                    <form action="SendOTP" method="post" onsubmit="return validateEmail(1);">
                         <input type="text" name="email" placeholder="Email" autocomplete="off" onblur="validateEmail(1);">
                         <input type="submit" value="Send OTP">
                     </form >

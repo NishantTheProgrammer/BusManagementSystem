@@ -27,7 +27,7 @@
         </div>
         <a class="link" href="updateBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Bus</a>
         <a class="link" href="updateRoute.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
-        <a class="link" href="updateSalary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Salary</a>
+        <a class="link" href="leaveRequests.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
         <a class="link" href="updateFare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a> 
 
         <%}
