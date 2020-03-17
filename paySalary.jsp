@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/leave.css">
     <link rel="icon" href="images/icon.png">
-    <title>Available Buses</title>
+    <title>Pay Salary</title>
     <style>
     .searchOutput
     {
@@ -57,17 +57,15 @@
     <jsp:include page="svg.jsp"></jsp:include>
     <div class="container">
         <div class="workspace">
-            <form action="busesResult.jsp">
-                <h1>Available Buses</h1>
-                <input type="search" id="from" placeholder="From" onkeyup="getFrom(this.value);" name="source" autocomplete="on">
+            <form onsubmit="return pay();">
+                <h1>Pay Salary</h1>
+                <input type="search" id="payee" placeholder="Payee" onkeyup="getPayee(this.value);" autocomplete="on">
                 <div class="searchOutput">
                     <div class="list""></div>
                 </div>
-                <input type="search" id="to" placeholder="To" onkeyup="getTo(this.value);" name="destination" autocomplete="on">
-                <div class="searchOutput">
-                    <div class="list""></div>
-                </div>
-                <input type="submit" value="Check Buses">
+                <input type="text" id="amount" name="amount" style="width: 18vw;" placeholder="Amount">
+                <input type="submit" value="Pay">
+                <h1 style="color:rgb(70, 255, 70);" id="result"></h1>
             </form>
         </div>
     </div> 
@@ -75,43 +73,42 @@
 </body>
 <script src="scripts/navPannel.js"></script>
 <script>
-function setFrom(value)
+function setPayee(value)
 {
-    console.log(value);
-    document.getElementById('from').value = value;
+    document.getElementById('payee').value = value;
 }
-function setTo(value)
-{
-    console.log(value);
-    document.getElementById('to').value = value;
-}
-function getFrom(keyword)
+function getPayee(payee)
 {
 
-    var param = "?keyword=" +  keyword;
+    var param = "?payee=" +  payee;
     param = param.replace("+", "%2b")
     
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "availableBusesAJAX.jsp" + param, false);
+    xmlhttp.open("POST", "paySalaryAJAX.jsp" + param, false);
     
     xmlhttp.onreadystatechange = function(){
         document.getElementsByClassName('list')[0].innerHTML = xmlhttp.responseText;
     }
     xmlhttp.send();
 }
-function getTo(keyword)
+function pay()
 {
-
-    var param = "?keyword=" +  keyword;
-    param = param.replace("+", "%2b")
+    var payee = document.getElementById("payee").value;
+    var amount = document.getElementById("amount").value;
+    var param = "?payee=" +  payee + "&amount=" +  amount;
+    param = encodeURI(param);
+    console.log(param);
     
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "availableBusesAJAX2.jsp" + param, false);
+    xmlhttp.open("POST", "paySalaryAJAX2.jsp" + param, false);
     
     xmlhttp.onreadystatechange = function(){
-        document.getElementsByClassName('list')[1].innerHTML = xmlhttp.responseText;
+        document.getElementById("result").innerText = xmlhttp.responseText.trim();;
+        setInterval(function(){ location.reload(); }, 2000);
     }
     xmlhttp.send();
+    return false;
 }
+
 </script>
 </html>

@@ -27,8 +27,9 @@
         </div>
         <a class="link" href="updateBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Bus</a>
         <a class="link" href="updateRoute.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
+        <a class="link" href="paySalary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Pay</a>
         <a class="link" href="leaveRequests.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
-        <a class="link" href="updateFare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a> 
+        <a class="link" href="reports.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Reports</a> 
 
         <%}
         else if(session.getAttribute("role").equals("driver") ||
@@ -45,11 +46,16 @@
                 <div class="logout" onclick="window.location='logout';"></div>
             </div>
         </div>
-        
         <a class="link" href="report.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Report</a>
         <a class="link" href="leave.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
         <a class="link" href="salary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Salary</a>
         <a class="link" href="fare.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Fare</a>
+        <%
+        if(session.getAttribute("role").equals("ticketchecker"))
+        {%>
+            <a class="link" href="checkTicket.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Check Ticket</a>
+        <%}
+        %>
 
         <%}
         else if(session.getAttribute("role").equals("passanger"))

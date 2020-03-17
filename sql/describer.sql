@@ -155,9 +155,17 @@ delete from leave_request where email = 'knishant118@gmail.com';
 
 select applicationNo from leave_request where email = 'knishant118@gmail.com' order by applicationNo desc limit 1;
 select * from leave_request;
-select status from leave_request where email = 'knishant118@gmail.com' and applicationNo=1009;
+select status from leave_request where email = 'knishant118@gmail.com' and applicationNo=1011;
 
-update leave_request set status='pending' where applicationNo = 1009;
+update leave_request set status='pending' where applicationNo = 1011;
+desc routestands;
+desc report;
+delete from report where submittedBy = 'knishant118@gmail.com';
+insert into report(routeNo, standName, busNo, description, submittedBy) values('971', 'Mandoli-xing', 'DL 1234', 'abcd', 'knishant113@gmail.com');
+select * from report order by reportNo desc;
+
+select * from ticketOutput;
+select  timestampdiff(HOUR ,bookingTime, current_timestamp()) as remainValidity from ticket;
 
 
 

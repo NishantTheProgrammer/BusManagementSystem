@@ -12,6 +12,7 @@
     
 </head>
 <body>
+<%@page import="java.sql.*"%>
     <jsp:include page="navigationPannel.jsp"></jsp:include>
     <div class="container">           
         <jsp:include page="svg.jsp"></jsp:include> 
@@ -20,23 +21,37 @@
             <p>There is a deeper satisfaction if you earn from your own<br> work than relying on corruptible ways of amassing riches.</p>
         </div>
         <div class="policy">   
-            <h1>Rajesh Kumar</h1>         
+            <h1 style="text-transform: capitalize;">${name}</h1>         
             <table>
                 <tr>
                     <th>Transaction Id</th>
                     <th>Amount</th>
                     <th>Date</th>
                 </tr>
-                <tr>
-                    <td>1101</td>
-                    <td>30,000</td>
-                    <td>11/12/2018</td>
-                </tr>
-                <tr>
-                    <td>1105</td>
-                    <td>42,000</td>
-                    <td>11/12/2018</td>
-                </tr>
+                <%
+                Connection con = null;
+                Statement st = null;
+                ResultSet rs = null;
+                try
+                {
+                    Class.forName("com.mysql.jdbc.Driver");
+                    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
+                    st = con.createStatement();
+                    String query = "select transactionNo, amount, date from salary where email='"+session.getAttribute("email")+"'";
+                    rs = st.executeQuery(query);
+                    while(rs.next())
+                    {%>
+                        <tr>
+                            <tr>
+                                <td><%=rs.getInt("transactionNo")%></td>
+                                <td><%=rs.getInt("amount")%></td>
+                                <td><%=rs.getString("date")%></td>
+                            </tr>
+                        </tr>
+                    <%}
+                }
+                catch(Exception e){out.print(e.getMessage());}
+            %>
             </table>
         </div>
     </div>
