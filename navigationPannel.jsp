@@ -18,10 +18,10 @@
         else if(session.getAttribute("role").equals("admin"))
         {%>            
         <div class="userProfile">
-            <p class="userName">${name}</p>
+            <p class="userName"><%=session.getAttribute("name").toString().split(" ")[0]%></p>
             <div class="userImg" style="background-image: url('images/userProfile/${profilePic}');"></div>
             <div class="iconContainer">
-                <div class="setting"></div>
+                <div class="setting" onclick="window.location='setting.jsp';"></div>
                 <div class="logout" onclick="window.location='logout';"></div>
             </div>
         </div>
@@ -30,6 +30,7 @@
         <a class="link" href="paySalary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Pay</a>
         <a class="link" href="leaveRequests.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
         <a class="link" href="reports.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Reports</a> 
+        <a class="link" href="sales.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Sales</a>
 
         <%}
         else if(session.getAttribute("role").equals("driver") ||
@@ -39,10 +40,10 @@
         {
         %>            
         <div class="userProfile">
-            <p class="userName">${name}</p>
+            <p class="userName"><%=session.getAttribute("name").toString().split(" ")[0]%></p>
             <div class="userImg" style="background-image: url('images/userProfile/${profilePic}');"></div>
             <div class="iconContainer">
-                <div class="setting"></div>
+                <div class="setting" onclick="window.location='setting.jsp';"></div>
                 <div class="logout" onclick="window.location='logout';"></div>
             </div>
         </div>
@@ -61,10 +62,10 @@
         else if(session.getAttribute("role").equals("passanger"))
         {%>            
         <div class="userProfile">
-            <p class="userName">${name}</p>
+            <p class="userName"><%=session.getAttribute("name").toString().split(" ")[0]%></p>
             <div class="userImg" style="background-image: url('images/userProfile/${profilePic}');"></div>
             <div class="iconContainer">
-                <div class="setting"></div>
+                <div class="setting" onclick="window.location='setting.jsp';"></div>
                 <div class="logout" onclick="window.location='logout';"></div>
             </div>
         </div>
