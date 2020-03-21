@@ -5,6 +5,7 @@ var errorColor = "rgb(241, 101, 7)";
 
 function validateName()
 {
+    var isValid = false;
     var name = document.getElementsByName("name")[0];
     if(name.value == "")
     {
@@ -22,7 +23,9 @@ function validateName()
     {
         name.style.borderBottom = "1.9px solid aqua";
         name.placeholder = "Name";
+        isValid = true;
     }
+    return isValid;
 }
 
 //------------------------------------------------------Validating email------------------------------------------------------
@@ -95,6 +98,7 @@ function validateEmail(num)
 
 function validatePhone()
 {    
+    var isValid = false;
     var phone = document.getElementsByName("phone")[0];
     if(phone.value == "")
     {
@@ -106,6 +110,7 @@ function validatePhone()
     {
         phone.style.borderBottom = "1.9px solid aqua";
         phone.placeholder = "Phone";
+        isValid = true;
     }
     else
     {
@@ -113,34 +118,39 @@ function validatePhone()
         phone.value = "";
         phone.placeholder = "Value should be 10 digit Numerical";
     }
+    return isValid;
 }
 
-//---------------------------------------------Commented just for development phase---------------------------------------
-// function validatePassword(num)
-// {
-//     var p = document.getElementsByName("password")[num];
-//     if(p.value.length <= 0)
-//     {
-//         p.placeholder = "Please insert password!";
-//         p.style.borderBottom = "1.9px solid "+errorColor;
-//     }
-//     else if(p.value.length <= 8)
-//     {
-//         p.value = "";
-//         p.placeholder="Password Should at least 8 digit!";
-//         p.style.borderBottom = "1.9px solid "+errorColor;
-//     }
-//     else
-//     {
-//         p.style.borderBottom = "1.9px solid aqua";
-//         p.placeholder = "Password";
-//     }
-// }
+//-------------------------------------------------------Validating Passowrd---------------------------------------
+function validatePassword(num)
+{
+    var isValid = false;
+    var p = document.getElementsByName("password")[num];
+    if(p.value == "" && p.value.length <= 0)
+    {
+        p.placeholder = "Please insert password!";
+        p.style.borderBottom = "1.9px solid "+errorColor;
+    }
+    else if(p.value.length < 4)
+    {
+        p.value = "";
+        p.placeholder="Password Should at least 4 digit!";
+        p.style.borderBottom = "1.9px solid "+errorColor;
+    }
+    else
+    {
+        p.style.borderBottom = "1.9px solid aqua";
+        p.placeholder = "Password";
+        isValid = true;
+    }
+    return isValid;
+}
 
 //-------------------------------------------------------Validate Role----------------------------------------------------
 
 function validateRole()
 {
+    var isValid = false;
     var role = document.getElementById("role");
     if(role.value == "")
     {
@@ -149,13 +159,16 @@ function validateRole()
     else
     {
         role.style.border = "1.9px solid aqua";
+        isValid = true;
     }
+    return isValid;
 }
 
 //-------------------------------------------------------Validate wallet balance------------------------------------------
 
 function validateWalletBal()
-{    
+{   
+    var isValid = false; 
     var bal = document.getElementsByName("walletBalance")[0];
     if(bal.value == "")
     {
@@ -167,6 +180,7 @@ function validateWalletBal()
     {
         bal.style.borderBottom = "1.9px solid aqua";
         bal.placeholder = "Wallet Balance";
+        isValid = true;
     }
     else
     {
@@ -174,12 +188,14 @@ function validateWalletBal()
         bal.value = "";
         bal.placeholder = "Should be in numbers < 7 digit";
     }
+    return isValid;
 }
 
 //--------------------------------------------------------Validating licence------------------------------------------------
 
 function validateLicence()
 {    
+    var isValid = false;
     var licence = document.getElementsByName("licenceNo")[0];
     if(licence.value == "")
     {
@@ -191,6 +207,7 @@ function validateLicence()
     {
         licence.style.borderBottom = "1.9px solid aqua";
         licence.placeholder = "Licence";
+        isValid = true;
     }
     else
     {
@@ -198,12 +215,14 @@ function validateLicence()
         licence.value = "";
         licence.placeholder = "Licence should be 10 digit alphanumaric";
     }
+    return isValid;
 }
 
 //-----------------------------------------------------Validating experience------------------------------------------------
 
 function validateExperience()
 {    
+    var isValid = false;
     var exp = document.getElementsByName("experience")[0];
     if(exp.value == "")
     {
@@ -215,6 +234,7 @@ function validateExperience()
     {
         exp.style.borderBottom = "1.9px solid aqua";
         exp.placeholder = "Experience";
+        isValid = true;
     }
     else
     {
@@ -222,12 +242,14 @@ function validateExperience()
         exp.value = "";
         exp.placeholder = "Experiece: 0 - 99 years";
     }
+    return isValid;
 }
 
 //----------------------------------------------------Validating Joining Date-----------------------------------------------
 
 function validateJoiningDate()
 {
+    var isValid = false;
     var jd = document.getElementById("joiningDate");
     if(jd.value == "")
     {
@@ -236,5 +258,57 @@ function validateJoiningDate()
     else
     {
         jd.style.border = "1.9px solid aqua";
+        isValid = true;
     }
+    return isValid;
+}
+
+function validateForm()
+{
+    
+    var isValid = true;
+
+    if(validateName() == false)
+        isValid = false;
+    if(validateEmail(0) == false)
+        isValid = false;
+    if(validatePhone() == false)
+        isValid = false;
+
+    if(validateRole())
+    {
+        var role = document.getElementById("role"); 
+
+        if(role.value == 'Passanger')
+        {
+            if(validateWalletBal() == false)
+                isValid = false;
+        }
+        else if(role.value == 'Driver')
+        {
+            if(validateLicence() == false)
+                isValid = false;
+            if(validateExperience() == false)
+                isValid = false;
+            if(validateJoiningDate() == false)
+                isValid = false;
+        }
+        else if(role.value == 'Conductor')
+        {
+            if(validateJoiningDate() == false)
+                isValid = false;
+        }
+        else if(role.value == 'Ticket Checker')
+        {
+            if(validateJoiningDate() == false)
+                isValid = false;
+        }
+    }
+    else
+    {
+        isValid = false;
+    }
+    if(validatePassword(1) == false)
+        isValid = false;
+    return isValid;
 }

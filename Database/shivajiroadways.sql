@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `shivajiroadways` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `shivajiroadways`;
 -- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: shivajiroadways
@@ -39,7 +41,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('aarti@bharti.com','Aarti','1234567890','1234',_binary 'aarti@bharti.com'),('aarti2@bharti.com','Aarti2','1234567890','1234',_binary 'aarti2@bharti.com.png'),('aktonkrocks@gmail.com','Akash Tonk','9999999900','12345678',_binary 'mama.jpeg'),('implesivetonk@gmail.com','akash','8920300782','bhaihai',''),('knishant113@gmail.com','Nishant','8860009709','12345',_binary '50521803_2287615878118411_17472201838034944_o.jpg'),('knishant120@gmail.com','Raju','9898989898','123456789',_binary 'Screenshot (196).png'),('knishant121@gmail.com','Raju2','9999999999','9999999999',_binary '80785377_3178218225525102_708998374996574208_n.jpg'),('knishant123@gmail.com','Nishant','8888888888','1234',''),('ram@gmail.com','ram babu','1231231231','1234',_binary 'ram@gmail.com.jpg');
+INSERT INTO `admin` VALUES ('aarti@bharti.com','Aarti','1234567890','1234',_binary 'aarti@bharti.com'),('aarti2@bharti.com','Aarti2','1234567890','1234',_binary 'aarti2@bharti.com.png'),('aktonkrocks@gmail.com','Akash Tonk','9999999900','12345678',_binary 'mama.jpeg'),('implesivetonk@gmail.com','akash','8920300782','bhaihai',''),('knishant113@gmail.com','Nishant','8860009709','12345',_binary '50521803_2287615878118411_17472201838034944_o.jpg'),('knishant120@gmail.com','Raju','9898989898','123456789',_binary 'Screenshot (196).png'),('knishant121@gmail.com','Raju2','9999999999','9999999999',_binary '80785377_3178218225525102_708998374996574208_n.jpg'),('knishant123@gmail.com','Nishant','8888888888','1234',''),('ram@gmail.com','ram babu','1231231231','1234',_binary 'ram@gmail.com.jpg'),('shivam@gmail.com','Shivam Rathore','0989098909','1234',_binary 'shivam@gmail.com.png');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,7 +70,7 @@ CREATE TABLE `conductor` (
 
 LOCK TABLES `conductor` WRITE;
 /*!40000 ALTER TABLE `conductor` DISABLE KEYS */;
-INSERT INTO `conductor` VALUES ('knishant117@gmail.com','Nishant Kumar','7838716089','1234','1999-11-25',_binary 'cert-1014-11158784.jpg'),('vivek124@gmail.com','vivek','1234567890','1234','2020-12-27',_binary 'vivek124@gmail.com.jpg');
+INSERT INTO `conductor` VALUES ('knishant117@gmail.com','Nishant Kumar','7838716089','1234','1999-11-25',_binary 'cert-1014-11158784.jpg'),('mark@facebook.com','Mark Zukerberg','1234567890','1234','1984-05-14',_binary 'mark@facebook.com.jpg'),('vivek124@gmail.com','vivek','1234567890','1234','2020-12-27',_binary 'vivek124@gmail.com.jpg');
 /*!40000 ALTER TABLE `conductor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +101,7 @@ CREATE TABLE `driver` (
 
 LOCK TABLES `driver` WRITE;
 /*!40000 ALTER TABLE `driver` DISABLE KEYS */;
-INSERT INTO `driver` VALUES ('knishant115@gmail.com','Sansa Stark','8860000000','avcvcv','ABCDABCD21',12,'2020-03-01',_binary '86757871_771360236719318_2576521121042006016_n.jpg');
+INSERT INTO `driver` VALUES ('knishant115@gmail.com','Nishant','8860000000','1234','ABCDABCD21',12,'2020-03-01',_binary '86757871_771360236719318_2576521121042006016_n.jpg'),('maurya@gmail.com','Maurya','1234567890','1234','ABCDABCDAB',10,'2020-03-29',_binary 'maurya@gmail.com.png');
 /*!40000 ALTER TABLE `driver` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +124,7 @@ CREATE TABLE `email` (
 
 LOCK TABLES `email` WRITE;
 /*!40000 ALTER TABLE `email` DISABLE KEYS */;
-INSERT INTO `email` VALUES ('aarti@bharti.com'),('aarti2@bharti.com'),('aktonkrocks@gmail.com'),('freelancerkulsum@gmail.com'),('himanshu32301@gmail.com'),('implesivetonk@gmail.com'),('jaat39157@gmail.com'),('knishant113@gmail.com'),('knishant114@gmail.com'),('knishant115@gmail.com'),('knishant116@gmail.com'),('knishant117@gmail.com'),('knishant118@gmail.com'),('knishant120@gmail.com'),('knishant121@gmail.com'),('knishant123@gmail.com'),('ram@gmail.com'),('tarun123@gmail.com'),('vivek124@gmail.com');
+INSERT INTO `email` VALUES ('aarti@bharti.com'),('aarti2@bharti.com'),('aktonkrocks@gmail.com'),('freelancerkulsum@gmail.com'),('himanshu32301@gmail.com'),('implesivetonk@gmail.com'),('jaat39157@gmail.com'),('knishant113@gmail.com'),('knishant114@gmail.com'),('knishant115@gmail.com'),('knishant116@gmail.com'),('knishant117@gmail.com'),('knishant118@gmail.com'),('knishant120@gmail.com'),('knishant121@gmail.com'),('knishant123@gmail.com'),('knishant124@gmail.com'),('mark@facebook.com'),('maurya@gmail.com'),('ram@gmail.com'),('shivam@gmail.com'),('tarun123@gmail.com'),('vivek124@gmail.com');
 /*!40000 ALTER TABLE `email` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,7 +185,7 @@ CREATE TABLE `passanger` (
 
 LOCK TABLES `passanger` WRITE;
 /*!40000 ALTER TABLE `passanger` DISABLE KEYS */;
-INSERT INTO `passanger` VALUES ('freelancerkulsum@gmail.com','Suma','9999999999','1234',0,_binary 'Screenshot (95).png'),('himanshu32301@gmail.com','Himanshu','9990207601','password',0,_binary 'himanshu32301@gmail.com.jpg'),('jaat39157@gmail.com','Rahul','1234567890','12345',5,_binary 'jaat39157@gmail.com.jpg'),('knishant114@gmail.com','Aman Bhai','962559000','1234',40,_binary '86633265_681702735913393_7868556789816492032_n.jpg');
+INSERT INTO `passanger` VALUES ('freelancerkulsum@gmail.com','Suma','9999999999','1234',90,_binary 'Screenshot (95).png'),('himanshu32301@gmail.com','Himanshu','9990207601','password',0,_binary 'himanshu32301@gmail.com.jpg'),('jaat39157@gmail.com','Rahul','1234567890','12345',5,_binary 'jaat39157@gmail.com.jpg'),('knishant114@gmail.com','Aman Bhai','962559000','1234',170,_binary '86633265_681702735913393_7868556789816492032_n.jpg');
 /*!40000 ALTER TABLE `passanger` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,7 +348,7 @@ CREATE TABLE `ticket` (
   KEY `email` (`email`),
   CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`routeNo`) REFERENCES `route` (`routeNo`),
   CONSTRAINT `ticket_ibfk_2` FOREIGN KEY (`email`) REFERENCES `passanger` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=1040 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1042 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -355,7 +357,7 @@ CREATE TABLE `ticket` (
 
 LOCK TABLES `ticket` WRITE;
 /*!40000 ALTER TABLE `ticket` DISABLE KEYS */;
-INSERT INTO `ticket` VALUES (1001,'971','Mandoli X-ing','Ashok Vihar X-ing','knishant114@gmail.com','2020-03-13 16:37:00',NULL,'ORD',1,15),(1002,'RL77 Extn.','Shastri Bazar','Dwarka Sector 6-10 X-ing','knishant114@gmail.com','2020-03-13 16:56:01',NULL,'ORD',1,15),(1003,'RL77','New Delhi Railway Station Gate 2','Mangla Puri Terminal','knishant114@gmail.com','2020-03-13 16:56:53',NULL,'ORD',1,15),(1007,'GL23','ISBT / Kashmiri Gate','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-13 17:05:01',NULL,'ORD',1,15),(1019,'GL23Cluster','Krishna Nagar A Block','Jharkhandi','knishant114@gmail.com','2020-03-13 17:10:38',NULL,'ORD',1,10),(1020,'GL23Cluster','Hans Apartment','Jagatpuri F-Block','knishant114@gmail.com','2020-03-13 17:14:02',NULL,'ORD',1,10),(1021,'GL23','ISBT / Kashmiri Gate','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-13 17:15:22',NULL,'ORD',1,15),(1022,'GL90','Kendriya Terminal','Regal','knishant114@gmail.com','2020-03-14 06:30:28',NULL,'ORD',1,5),(1023,'GL23','ISBT / Kashmiri Gate','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-14 06:35:12',NULL,'ORD',1,15),(1024,'GL23','Jagat Puri A-Block','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-14 06:39:25',NULL,'ORD',1,5),(1025,'GL23','Shyam Giri Mandir','Seelam Pur','knishant114@gmail.com','2020-03-14 06:40:09',NULL,'ORD',1,5),(1026,'GL23','Anand Vihar ISBT (Viveka Nand ISBT)','Jagat Puri A-Block','knishant114@gmail.com','2020-03-14 06:40:22',NULL,'ORD',1,5),(1027,'GL23','Anand Vihar ISBT (Viveka Nand ISBT)','Jagat Puri A-Block','knishant114@gmail.com','2020-03-14 06:41:16',NULL,'ORD',1,5),(1028,'TMSLajpatNgrAzadpurTerminal','Nehru Nagar','Maharani Bagh','knishant114@gmail.com','2020-03-14 06:42:33',NULL,'ORD',1,5),(1029,'971','Mandoli X-ing','Ashok Vihar X-ing','knishant114@gmail.com','2020-03-14 07:41:52',NULL,'AC',1,25),(1030,'GL22','New Delhi Railway Station Gate 2','Anand Vihar ISBT (Viveka Nand ISBT)','freelancerkulsum@gmail.com','2020-03-14 09:38:44',NULL,'AC',1,20),(1031,'GL22','New Delhi Railway Station Gate 2','Hasan Pur Depot (Patparganj Depot)','freelancerkulsum@gmail.com','2020-03-14 09:39:00',NULL,'ORD',1,10),(1032,'971','Model Town II','Seema Puri','jaat39157@gmail.com','2020-03-15 06:13:58',NULL,'ORD',1,15),(1033,'971','Anand Vihar ISBT (Viveka Nand ISBT)','Rohini Sector 6','jaat39157@gmail.com','2020-03-15 06:14:23',NULL,'AC',1,25),(1034,'971','Anand Vihar ISBT (Viveka Nand ISBT)','Seema Puri','jaat39157@gmail.com','2020-03-15 06:14:57',NULL,'ORD',1,5),(1035,'971','Bhajanpura','Ashok Vihar X-ing','himanshu32301@gmail.com','2020-03-15 07:02:24',NULL,'AC',2,40),(1036,'971','Model Town II','Bhajanpura','himanshu32301@gmail.com','2020-03-15 07:04:39',NULL,'ORD',1,10),(1037,'33','Nand Nagri Terminal','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-16 13:37:20',NULL,'ORD',1,10),(1038,'7','Delhi Gate','Nirankari Colony','knishant114@gmail.com','2020-03-17 18:58:27',NULL,'ORD',1,15),(1039,'RL79','Regal','Kendriya Terminal','knishant114@gmail.com','2020-03-19 05:43:10',NULL,'ORD',1,5);
+INSERT INTO `ticket` VALUES (1001,'971','Mandoli X-ing','Ashok Vihar X-ing','knishant114@gmail.com','2020-03-13 16:37:00','Bus timing was awesome but need to increase hygienic enviroment in the buses','ORD',1,15),(1002,'RL77 Extn.','Shastri Bazar','Dwarka Sector 6-10 X-ing','knishant114@gmail.com','2020-03-13 16:56:01',NULL,'ORD',1,15),(1003,'RL77','New Delhi Railway Station Gate 2','Mangla Puri Terminal','knishant114@gmail.com','2020-03-13 16:56:53',NULL,'ORD',1,15),(1007,'GL23','ISBT / Kashmiri Gate','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-13 17:05:01',NULL,'ORD',1,15),(1019,'GL23Cluster','Krishna Nagar A Block','Jharkhandi','knishant114@gmail.com','2020-03-13 17:10:38',NULL,'ORD',1,10),(1020,'GL23Cluster','Hans Apartment','Jagatpuri F-Block','knishant114@gmail.com','2020-03-13 17:14:02',NULL,'ORD',1,10),(1021,'GL23','ISBT / Kashmiri Gate','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-13 17:15:22',NULL,'ORD',1,15),(1022,'GL90','Kendriya Terminal','Regal','knishant114@gmail.com','2020-03-14 06:30:28',NULL,'ORD',1,5),(1023,'GL23','ISBT / Kashmiri Gate','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-14 06:35:12',NULL,'ORD',1,15),(1024,'GL23','Jagat Puri A-Block','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-14 06:39:25',NULL,'ORD',1,5),(1025,'GL23','Shyam Giri Mandir','Seelam Pur','knishant114@gmail.com','2020-03-14 06:40:09',NULL,'ORD',1,5),(1026,'GL23','Anand Vihar ISBT (Viveka Nand ISBT)','Jagat Puri A-Block','knishant114@gmail.com','2020-03-14 06:40:22',NULL,'ORD',1,5),(1027,'GL23','Anand Vihar ISBT (Viveka Nand ISBT)','Jagat Puri A-Block','knishant114@gmail.com','2020-03-14 06:41:16',NULL,'ORD',1,5),(1028,'TMSLajpatNgrAzadpurTerminal','Nehru Nagar','Maharani Bagh','knishant114@gmail.com','2020-03-14 06:42:33',NULL,'ORD',1,5),(1029,'971','Mandoli X-ing','Ashok Vihar X-ing','knishant114@gmail.com','2020-03-14 07:41:52',NULL,'AC',1,25),(1030,'GL22','New Delhi Railway Station Gate 2','Anand Vihar ISBT (Viveka Nand ISBT)','freelancerkulsum@gmail.com','2020-03-14 09:38:44',NULL,'AC',1,20),(1031,'GL22','New Delhi Railway Station Gate 2','Hasan Pur Depot (Patparganj Depot)','freelancerkulsum@gmail.com','2020-03-14 09:39:00','namo','ORD',1,10),(1032,'971','Model Town II','Seema Puri','jaat39157@gmail.com','2020-03-15 06:13:58',NULL,'ORD',1,15),(1033,'971','Anand Vihar ISBT (Viveka Nand ISBT)','Rohini Sector 6','jaat39157@gmail.com','2020-03-15 06:14:23','The management is quite good and the service by this website is appreciated','AC',1,25),(1034,'971','Anand Vihar ISBT (Viveka Nand ISBT)','Seema Puri','jaat39157@gmail.com','2020-03-15 06:14:57',NULL,'ORD',1,5),(1035,'971','Bhajanpura','Ashok Vihar X-ing','himanshu32301@gmail.com','2020-03-15 07:02:24','Bus timing was awesome but need to increase hygienic enviroment in the buses','AC',2,40),(1036,'971','Model Town II','Bhajanpura','himanshu32301@gmail.com','2020-03-15 07:04:39',NULL,'ORD',1,10),(1037,'33','Nand Nagri Terminal','Anand Vihar ISBT (Viveka Nand ISBT)','knishant114@gmail.com','2020-03-16 13:37:20',NULL,'ORD',1,10),(1038,'7','Delhi Gate','Nirankari Colony','knishant114@gmail.com','2020-03-17 18:58:27',NULL,'ORD',1,15),(1039,'RL79','Regal','Kendriya Terminal','knishant114@gmail.com','2020-03-19 05:43:10',NULL,'ORD',1,5),(1040,'17','Ramjanpur Village','Old Delhi Railway Station','knishant114@gmail.com','2020-03-20 18:24:56','Thank you','AC',13,325),(1041,'GL90','Regal','Zakhira','freelancerkulsum@gmail.com','2020-03-21 10:30:09','Very good experience in bus','ORD',1,10);
 /*!40000 ALTER TABLE `ticket` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -384,7 +386,7 @@ CREATE TABLE `ticketchecker` (
 
 LOCK TABLES `ticketchecker` WRITE;
 /*!40000 ALTER TABLE `ticketchecker` DISABLE KEYS */;
-INSERT INTO `ticketchecker` VALUES ('knishant118@gmail.com','Mukesh','8860009709','1234','2020-03-29',_binary 'forced-perspective-photography-of-cars-running-on-road-below-799443.jpg'),('tarun123@gmail.com','Tarun','1234567890','1234','2020-03-28',_binary 'tarun123@gmail.com.jpg');
+INSERT INTO `ticketchecker` VALUES ('knishant118@gmail.com','Nishant','9999999999','12345','2020-03-24',_binary 'forced-perspective-photography-of-cars-running-on-road-below-799443.jpg'),('knishant124@gmail.com','Aman','886009709','1234','1999-11-25',_binary 'knishant124@gmail.com.jpg'),('tarun123@gmail.com','Tarun','1234567890','1234','2020-03-28',_binary 'tarun123@gmail.com.jpg');
 /*!40000 ALTER TABLE `ticketchecker` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -436,4 +438,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-19 23:29:43
+-- Dump completed on 2020-03-21 22:35:44

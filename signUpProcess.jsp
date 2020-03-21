@@ -96,7 +96,7 @@
     String experience = null;
     String joiningDate = null;
 
-    out.print("name: "+name+" Email: "+email+" Phone: "+phone+" Role: "+role+" Password: "+password);
+    
 
 
 
@@ -157,7 +157,7 @@
             st = con.createStatement();
             query = "insert into Email values('" + email + "')";
             st.executeUpdate(query);
-            query = "insert into driver(email, name, phone, password, licenceNo, experience, dob, profilePic)  values('"+email+"', '"+name+"', '"+phone+"', '"+password+"', '"+licenceNo+"', '"+Integer.parseInt(experience)+"', '"+joiningDate+"');";
+            query = "insert into driver(email, name, phone, password, licenceNo, experience, dob, profilePic)  values('"+email+"', '"+name+"', '"+phone+"', '"+password+"', '"+licenceNo+"', '"+Integer.parseInt(experience)+"', '"+joiningDate+"', '"+fileName+"');";
             st.executeUpdate(query);
         }
         catch(Exception e)
@@ -208,8 +208,5 @@
             out.print(e.getMessage());
         }
     }
-
-
-
-
+    response.sendRedirect("registerdSuccessfully.jsp");
 %>

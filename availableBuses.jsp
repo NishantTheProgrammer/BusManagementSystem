@@ -53,6 +53,13 @@
     </style>
 </head>
 <body>
+<%
+if(session.getAttribute("email") == null || !session.getAttribute("role").equals("passanger"))
+{
+    response.sendRedirect("authentication.jsp");
+}
+%>
+
     <jsp:include page="navigationPannel.jsp"></jsp:include>
     <jsp:include page="svg.jsp"></jsp:include>
     <div class="container">

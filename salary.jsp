@@ -12,6 +12,20 @@
     
 </head>
 <body>
+    <%
+    if(session.getAttribute("email") == null)
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+    else if(session.getAttribute("role").equals("admin"))
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+    else if(session.getAttribute("role").equals("passanger"))
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+    %>    
 <%@page import="java.sql.*"%>
     <jsp:include page="navigationPannel.jsp"></jsp:include>
     <div class="container">           

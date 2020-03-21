@@ -109,8 +109,9 @@ select email, name, password,'passanger' as tablename from passanger union
 select email, name, password,'driver' as tablename from driver union
 select email, name, password,'conductor' as tablename from conductor union
 select email, name, password,'ticketchecker' as tablename from ticketchecker;
-select name from admin  where email = 'knishant120@gmail.com' and password = '123456789';
-select  * from passanger;
+delete from admin  where email = 'aktonkrocks@gmail.com' and password = '123456789';
+delete from email where email = 'vivek123@gmail.com';
+select * from email;
 
 select email, name, password, profilePic, 'admin' as tablename from admin  where email = 'knishant120@gmail.com' and password = '123456789' union
 select email, name, password, profilePic, 'passanger' as tablename from  passanger  where email = 'knishant120@gmail.com' and password = '123456789' union
@@ -121,7 +122,7 @@ select * from admin  where email = 'knishant123@gmail.com' and password = '1234'
 
 
 
-select * from ticketchecker;
+select * from driver;
 
 ALTER TABLE Orders
 ADD CONSTRAINT FK_PersonOrder
@@ -165,7 +166,60 @@ insert into report(routeNo, standName, busNo, description, submittedBy) values('
 select * from report order by reportNo desc;
 
 select * from ticketOutput;
-select  timestampdiff(HOUR ,bookingTime, current_timestamp()) as remainValidity from ticket;
+select  timestampdiff(HOUR ,bookingTime, current_timestamp()) as remainValidity from ticket where ticketNo = 1003234;
+
+
+
+delete from ticket where ticketNo between 1004 and 1006;
+delete from email where email = 'vivek123@gmail.com';
+select * from driver;
+select count(*) as count from conductor;
+select * from ticketchecker;
+select * from passanger;
+select sum(fare) as sum from ticketOutput;
+
+update admin set name='Nishant3' where email='knishant113@gmail.com';
+SELECT 
+    *
+FROM
+    driver;
+    
+insert into admin(email, name, phone, password, profilePic) values('knishant124@gmail.com', 'Nishant', '1110111010', '1234', 'knishant124@gmail.com');
+
+
+
+
+
+insert into driver(email, name, phone, password, licenceNo, experience, dob, profilePic)  values('Maurya@gmail.com', 'Maurya', '9988998800', '1234', 'ZYX1231231', '2', '2020-12-12');
+
+
+
+delete from email where email="Maurya@gmail.com";
+delete from driver where email="Maurya@gmail.com";
+
+
+
+
+select * from passanger;
+select ticket.ticketNo, ticket.email, passanger.name from ticket
+inner join passanger on ticket.email = passanger.email;
+
+
+select * from ticketOutput;
+
+desc ticketoutput;
+
+select profilePic, feedback, name, bookingDate from ticketOutput inner join passanger on ticketOutput.email = passanger.email where feedback is not null order by  bookingDate desc limit 2
+;
+
+update ticketoutput set feedback = null where ticketNo='del_nir1038';
+
+update ticket set feedback=null where ticketNo='1039';
+select * from passanger;
+
+
+
+
 
 
 

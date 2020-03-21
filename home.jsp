@@ -12,7 +12,15 @@
     
 </head>
 <body>
-
+    <div class="updationWindow">
+        <div id="close" onclick="closeWindow();">&#10006;</div>
+        <h1 id="result"></h1>
+        <form id="nameForm" onsubmit="return updateFeedback();">
+            <input type="text" name="ticketNo" placeholder="Ticket No">
+            <input type="text" name="feedback" placeholder="Feedback">
+            <input type="submit" value="Submit Feeback">
+        </form>
+    </div>   
     <jsp:include page="navigationPannel.jsp"></jsp:include>
     
     <div class="container">           
@@ -39,17 +47,39 @@
             <div class="userFeedbacks">
                 <h1>Dear Users</h1>
                 <p>You're my favorite reason to lose sleep</p>
+                <%@page import="java.sql.*"%>
+                <%
+                    String ticketNo = request.getParameter("ticketNo");
+                    String feedback = request.getParameter("feedback");
+
+                    Connection con = null;
+                    Statement st = null;
+                    ResultSet rs = null;
+                    try
+                    {
+                        Class.forName("com.mysql.jdbc.Driver");
+                        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/shivajiroadways", "root", "1234");
+                        st = con.createStatement();
+                        String query = "select profilePic, feedback, name, bookingDate from ticketOutput inner join passanger on ticketOutput.email = passanger.email where feedback is not null order by  bookingDate desc limit 2";
+                        rs = st.executeQuery(query);
+                        rs.next();
+                    }
+                    catch(Exception e){out.print(e.getMessage());}   
+                %>
+
                 <div class="user">
-                    <div class="userImg" style="background-image: url('images/himanshu.jpg');"></div>    
-                    <p>Bus timing was awesome but need to increase hygienic enviroment in the buses</p>
-                    <h2>Himanshu Singh</h2>
+                    <div class="userImg" style="background-image: url('./images/userProfile/<%=rs.getString("profilePic")%>');"></div>    
+                    <p><%=rs.getString("feedback")%></p>
+                    <h2><%=rs.getString("name")%></h2>
                 </div>
+                <%rs.next();%>
                 <div class="user">
-                    <div class="userImg" style="background-image: url('images/akashtonk.jpg');"></div>    
-                    <p>The management is quite good and the service by this website is appreciated</p>
-                    <h2>Akash Tonk</h2>
+                    <div class="userImg" style="background-image: url('./images/userProfile/<%=rs.getString("profilePic")%>');"></div>    
+                    <p><%=rs.getString("feedback")%></p>
+                    <h2><%=rs.getString("name")%></h2>
                 </div>
             </div>
+            <div class="plus" title="Add your feedback" onclick="change()">+</div>
             <div class="photoGallery">
                 <h1>Gallery</h1>
                 <p>Our latest best photos</p>
@@ -104,5 +134,52 @@
 <script src="scripts/navPannel.js">
 
  
+</script>
+<script>
+    function change()
+    {
+        var updatingWindow = document.getElementsByClassName("updationWindow")[0];
+        updatingWindow.style.height = "20vw";
+        updatingWindow.style.width = "40vw";
+        updatingWindow.style.opacity = "1";
+    }
+    function closeWindow()
+    {
+        var updatingWindow = document.getElementsByClassName("updationWindow")[0];
+        updatingWindow.style.height = "0";
+        updatingWindow.style.width = "0";
+        updatingWindow.style.opacity = "0";
+    } 
+    function updateFeedback()
+    {
+        var ticketNo = document.getElementsByName('ticketNo')[0].value;
+        ticketNo = ticketNo.slice(7, ticketNo.lenght)
+        var feedback = document.getElementsByName('feedback')[0].value;
+        var xmlhttp = new XMLHttpRequest();
+        var param = "?ticketNo=" +  ticketNo + "&feedback=" + feedback;
+        param = encodeURI(param);
+        xmlhttp.open("POST", "addFeedback.jsp" + param, false);
+        xmlhttp.onreadystatechange = function()
+        {
+            var result = document.getElementById("result");
+            document.getElementById("nameForm").style.display = "none";
+
+            result.style.display = "block";
+            result.innerText = xmlhttp.responseText.trim();
+            setInterval(function(){
+                var updatingWindow = document.getElementsByClassName("updationWindow")[0];
+                updatingWindow.style.height = "0";
+                updatingWindow.style.width = "0";
+                updatingWindow.style.opacity = "0";
+            }, 1000);
+            setInterval(function(){
+                location.reload();
+            }, 1500);
+            
+        }  
+        xmlhttp.send();
+
+        return false;
+    } 
 </script>
 </html>

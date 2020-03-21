@@ -25,8 +25,6 @@
                 <div class="logout" onclick="window.location='logout';"></div>
             </div>
         </div>
-        <a class="link" href="updateBuses.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Bus</a>
-        <a class="link" href="updateRoute.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Route</a>
         <a class="link" href="paySalary.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Pay</a>
         <a class="link" href="leaveRequests.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Leave</a>
         <a class="link" href="reports.jsp" onfocus="elemFocused(this)" onblur="elemBlurred(this)">Reports</a> 

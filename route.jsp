@@ -27,6 +27,13 @@
     </style>
 </head>
 <body>
+    <%
+    if(session.getAttribute("email") == null || !session.getAttribute("role").equals("passanger"))
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+    %>
+
 <%@page import="java.sql.*" %>
 <%
     Connection con = null;

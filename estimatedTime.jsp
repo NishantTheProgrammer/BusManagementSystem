@@ -12,6 +12,13 @@
     <title>Estimated Time</title>
 </head>
 <body onchange="calculateEsTime();">
+<%
+if(session.getAttribute("email") == null || !session.getAttribute("role").equals("passanger"))
+{
+    response.sendRedirect("authentication.jsp");
+}
+%>
+
 <%@page import="java.sql.*"%>
 <%
     Connection con = null;

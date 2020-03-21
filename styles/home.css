@@ -112,6 +112,11 @@
     text-align: justify;
     width: 24vw;
     margin: 2vw auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 .userFeedbacks .user h2
 {
@@ -164,4 +169,174 @@
 .photoRow p
 {
     margin-left: 2vw;
+}
+
+.plus
+{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -5px -5px 12px 0 rgba(255, 255, 255, 0.58);
+    background-color: rgb(94, 187, 224);
+    font-size: 5vw;
+    width: 5.8vw;
+    border-radius: 10vw;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin: 0 auto;
+    color: rgba(33, 33, 83, 0.85);;
+    transition: ease-in-out .5s;
+    user-select: none;
+}
+.plus:hover
+{
+    cursor: pointer;
+    background-color: rgb(71, 161, 197);
+    color: white;
+}
+.plus:active
+{
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 12px 0 rgba(255, 255, 255, 0.58);
+    color: rgb(197, 197, 197);   
+}
+
+
+.updationWindow
+{
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgba(83, 83, 95, 0.90);
+    box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.63);
+    width: 0vw;
+    height: 0vw;
+    opacity: 0;
+    border-radius: 5px;
+    transition: ease all .5s;
+    overflow: hidden;
+}
+#close
+{
+    float: right;
+    display: block;
+    padding: 0.5vw;
+    text-align: center;
+    height: 2vw;
+    width: 2vw;
+    font-size: 1.5vw;
+    margin: .5vw;
+    color: white;
+    user-select: none;
+    border-radius: 10vw;
+    transition: ease all .5s;
+}
+#close:hover
+{
+    background-color:rgba(28, 28, 53, 0.63);
+    cursor: pointer;
+}
+form
+{
+    position: relative;
+    clear: both;
+    top: 35%;
+    transform: translateY(-50%);
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: 80%;
+    /* background-color: yellow; */
+}
+form input[type="text"], form input[type="password"], form input[type="range"], form input[type="search"]
+{
+    display: block;
+    outline: none;
+    width: 60%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    font-size: 1vw;
+    margin: 10px auto;
+    padding: 10px;
+    color: rgb(214, 205, 205);
+    caret-color: rgb(214, 205, 205);
+    animation-name: input2;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+form h1
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+
+form input[type="submit"], input[type="button"]
+{
+    display: block;
+    outline: none;
+    /* width: 60%; */
+    background: transparent;
+    color: rgb(214, 205, 205);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 8px 18px;
+}
+form input[type="submit"]:hover, form input[type="submit"]:focus, input[type="button"]:hover, input[type="button"]:focus
+{
+    position: relative;
+    cursor: pointer;
+    animation-name: submit;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes submit
+{
+
+    100%
+    {
+        
+        color: black;
+        background-color: white;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.63);
+        border-radius: 50px;
+        
+    }
+}
+
+form input::placeholder
+{
+    color:  rgb(214, 205, 205);
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="search"]:focus
+{
+    animation-name: input;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+@keyframes input
+{
+    
+    100%
+    {
+
+        border-bottom:1.9px solid aqua;
+        width: 80%;
+        font-size: 1.4vw;
+    }
+}
+#result
+{
+    color: rgb(87, 254, 45);
+    display: none;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    clear: both;
+    text-align: center;
+    margin-bottom: 3vw;
 }

@@ -453,9 +453,7 @@
                                     <tr>
                                         <th>Experience</th><td><%=rs.getString("experience")%> years<td><div class="editButton" onclick="change('experience')"></div></td>
                                     </tr>
-                                    <tr>
-                                        <th>D.O.B.</th><td><%=rs.getString("dob")%><td><div class="editButton" onclick="change('dob')"></div></td>
-                                    </tr>
+                                    <tr><th>D.O.B.</th><td><%=rs.getString("dob")%><td><div class="editButton" onclick="change('dob')"></div></td></tr>
                                 <%}
                             } 
 

@@ -22,18 +22,17 @@
             </div>
             <div id="formContainer" >
                 <div class="signIn" >
-                    <form action="signIn" method="post">
+                    <form action="signIn" method="post" onsubmit="return validatePassword(0)">
                         <div class="ImgResult">
                         </div>
-                        <input type="text" name="id" placeholder="ID" autocomplete="off" onkeyup="checkAccount(this.value);">
-                        <!-- <input type="password" name="password" placeholder="Password" onblur="validatePassword(0);"> -->
+                        <input type="text" name="id" placeholder="Email" autocomplete="off" onkeyup="checkAccount(this.value);">
                         <input type="password" name="password" placeholder="Password">
                         <input type="submit" value="Sign In">
                     </form>
                     
                 </div>
                 <div class="signUp">
-                    <form action="SignUp" method="POST">
+                    <form action="SignUp" method="POST" onsubmit="return validateForm();">
                     <!-- <form action="test.jsp" method="POST"> -->
                         <input type="text" name="name" placeholder="Name" onblur="validateName();" autocomplete="off">
                         <input type="text" name="email" placeholder="Email" onblur="validateEmail(0);" autocomplete="off">

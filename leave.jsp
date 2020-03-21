@@ -76,6 +76,20 @@
     
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
+<%
+    if(session.getAttribute("email") == null)
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+    else if(session.getAttribute("role").equals("admin"))
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+    else if(session.getAttribute("role").equals("passanger"))
+    {
+        response.sendRedirect("authentication.jsp");
+    }
+%> 
 <script src="scripts/navPannel.js"></script>
 <script src="scripts/leave.js"></script>
 <script>
