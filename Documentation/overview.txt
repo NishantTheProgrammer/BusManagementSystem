@@ -1,0 +1,71 @@
+Bus Management System
+
+
+
+----------------------Roles----------------------
+1. Passengers
+2. Staff
+3. Bus Company(Admin)
+
+--------------------Features------------------
+
+*FOR PASSANGERS-----
+
+(i) Transaction table(transaction_id, date, c_location, destination, discount(if any), Fair)
+1. Distance between current location to destination
+2. Fair(Both A/C Non A/C busses)
+
+3. Esstimated time for reaching to bus stand from the location where he/she is
+4. Route.......(Suggession For bus route to reach a perticular location)
+5. E-ticket(PDF service)
+
+
+
+*FOR STAFF
+
+(i) employee table(Name, age, possition, sallary, no_of_leaves)
+1. Check sallary info
+2. Apply for a leave
+3. E-report if bus is being faulty
+4. Request to transfer/ promotion Etc.
+5. They can too know Fairs(In such cases in arguing with passangers)
+
+
+
+*FOR BUS COMPANY(Govt. in our case)
+
+(i)     Fair table(ac, non-ac) values((5, 10, 15), (10, 15, 20, 25))
+(ii)    Route table(Stating_point, Ending_point, no_of_bus_stands)
+(iii)   Bus table(details related to bus)
+(iv)    Payment_details table(transaction_id, Staff_id, Ammount, Status)
+1. Updating Fairs
+2. updating Routes
+3. Issuing more buses
+4. Introducing New Route
+5. Staff Payment
+6. POLICIES OF COMPANY(It will be described in about section of website)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
